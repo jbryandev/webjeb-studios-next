@@ -14,8 +14,23 @@ html,
 body {
   height: 100%;
 }
+html {
+  font-size: 20px;
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 13px;
+  }
+}
 body {
+  font-family: 'Archivo', sans-serif;
   line-height: 1.5;
+  color: #546972;
   -webkit-font-smoothing: antialiased;
 }
 img,
@@ -44,4 +59,27 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1em;
+  color: #202f38;
+}
+h1 {
+  font-size: 2.7em;
+}
+h2 {
+  font-size: 2.4em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
 }

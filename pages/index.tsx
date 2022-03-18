@@ -1,19 +1,14 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Header from '../components/header';
+import Layout from '../components/layout';
+import Image from 'next/image';
+import hero from '../public/images/hero-img.png';
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Head>
-        <title>Webjeb Studios - Next Version!</title>
-        <meta name='description' content='Jamstack websites!' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <Header />
-      <main>Main</main>
-      <footer>Footer</footer>
-    </>
+    <Layout title='Webjeb Studios - Next Version!'>
+      <p>HI, I'M JAMES</p>
+      <h1>I build amazing websites crafted to grow your business</h1>
+    </Layout>
   );
 };
 
