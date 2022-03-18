@@ -15,22 +15,22 @@ body {
   height: 100%;
 }
 html {
-  font-size: 20px;
+  font-size: 62.5%;
 }
 @media (max-width: 900px) {
   html {
-    font-size: 16px;
+    font-size: 45%;
   }
 }
 @media (max-width: 400px) {
   html {
-    font-size: 13px;
+    font-size: 40%;
   }
 }
 body {
   font-family: 'Archivo', sans-serif;
   line-height: 1.5;
-  color: #546972;
+  color: var(--color-text-body);
   -webkit-font-smoothing: antialiased;
 }
 img,
@@ -69,17 +69,21 @@ h5,
 h6 {
   font-family: 'Raleway', sans-serif;
   line-height: 1em;
-  color: #202f38;
+  color: var(--color-text-headings);
 }
 h1 {
-  font-size: 2.7em;
+  font-size: 5.5em;
 }
 h2 {
-  font-size: 2.4em;
+  font-size: 4.5em;
 }
 h3 {
-  font-size: 2em;
+  font-size: 3em;
 }
 h4 {
-  font-size: 1.5em;
+  font-size: 2.5em;
+}
+p,
+a {
+  font-size: 2em;
 }

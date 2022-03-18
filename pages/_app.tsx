@@ -1,8 +1,26 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
+  html {
+    --color-text-body: #546972;
+    --color-text-headings: #202f38;
+    --color-primary: #f26922;
+    --color-secondary: #546972;
+    --color-light-background: #fff;
+    --color-dark-background: #202f38;
+    --document-max-width: 1400px;
+  }
+`;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyles />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

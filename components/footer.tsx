@@ -24,15 +24,15 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  background-color: #202f38;
-  padding: 0 1rem 0 1rem;
+  background-color: var(--color-dark-background);
+  padding: 0 1.6rem 0 1.6rem;
 `;
 
 const FooterContainer = styled.div`
-  max-width: 1408px;
+  max-width: var(--document-max-width);
   display: flex;
   margin: auto;
-  padding: 3rem 0 3rem 0;
+  padding: 4.8rem 0 4.8rem 0;
 `;
 
 const MenuWrapper = styled.div`

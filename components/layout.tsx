@@ -31,11 +31,11 @@ const StyledLayout = styled.div`
 `;
 
 const StyledMain = styled.main`
-  padding: 0 1rem 0 1rem;
+  padding: 0 1.6rem 0 1.6rem;
 `;
 
 const MainContainer = styled.div`
-  max-width: 1408px;
+  max-width: var(--document-max-width);
   margin: auto;
-  padding: 5rem 0 5rem 0;
+  padding: 10rem 0 10rem 0;
 `;
