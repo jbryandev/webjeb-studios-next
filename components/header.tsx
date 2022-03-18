@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 5;
-  padding: 0 1.6rem 0 1.6rem;
+  padding: 0 var(--document-padding) 0 var(--document-padding);
   background-color: var(--color-light-background);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
 `;

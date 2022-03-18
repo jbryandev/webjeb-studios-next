@@ -25,7 +25,7 @@ export default Footer;
 
 const StyledFooter = styled.footer`
   background-color: var(--color-dark-background);
-  padding: 0 1.6rem 0 1.6rem;
+  padding: 0 var(--document-padding) 0 var(--document-padding);
 `;
 
 const FooterContainer = styled.div`

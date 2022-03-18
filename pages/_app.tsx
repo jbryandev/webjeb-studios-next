@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --color-light-background: #fff;
     --color-dark-background: #202f38;
     --document-max-width: 1400px;
+    --document-padding: 3rem;
   }
 `;
 
