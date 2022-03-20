@@ -17,9 +17,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <Header />
-    <StyledMain>
-      <MainContainer>{children}</MainContainer>
-    </StyledMain>
+    <main>{children}</main>
     <Footer />
   </StyledLayout>
 );
@@ -28,14 +26,4 @@ export default Layout;
 
 const StyledLayout = styled.div`
   margin: auto;
-`;
-
-const StyledMain = styled.main`
-  padding: 0 var(--document-padding) 0 var(--document-padding);
-`;
-
-const MainContainer = styled.div`
-  max-width: var(--document-max-width);
-  margin: auto;
-  padding: 5rem 0 5rem 0;
 `;

@@ -2,21 +2,28 @@ import Menu from './menu';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../public/images/webjeb-studios-logo.png';
+import Section from './section';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <HeaderContainer>
-        <Link href={'/'}>
-          <a>
-            <Image src={logo} alt='Webjeb Studios Logo' />
-          </a>
-        </Link>
-        <MenuWrapper>
-          <Menu />
-        </MenuWrapper>
-      </HeaderContainer>
+      <Section>
+        <HeaderContainer>
+          <Link href={'/'}>
+            <a>
+              <Image
+                src='/images/webjeb-studios-logo.png'
+                alt='Webjeb Studios Logo'
+                width='169'
+                height='47'
+              />
+            </a>
+          </Link>
+          <MenuWrapper>
+            <Menu />
+          </MenuWrapper>
+        </HeaderContainer>
+      </Section>
     </StyledHeader>
   );
 };
@@ -27,18 +34,16 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   z-index: 5;
-  padding: 0 var(--document-padding) 0 var(--document-padding);
   background-color: var(--color-light-background);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
 `;
 
 const HeaderContainer = styled.div`
-  max-width: var(--document-max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  padding: 1.6rem 0 1.6rem 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 `;
 
 const MenuWrapper = styled.div`
@@ -69,8 +74,8 @@ const MenuWrapper = styled.div`
     text-transform: uppercase;
     letter-spacing: 2px;
     background-color: var(--color-primary);
-    padding: 1rem 1.6rem 1rem 1.6rem;
-    border-radius: 2px;
+    padding: 1.1rem 1.6rem 1.1rem 1.6rem;
+    border-radius: 3px;
     transition: background-color 0.4s ease-in-out;
 
     &:hover {
