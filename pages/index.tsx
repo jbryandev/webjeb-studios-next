@@ -11,7 +11,7 @@ import Blurb from '../components/blurb';
 const Home: NextPage = () => {
   return (
     <Layout title='Webjeb Studios - Next Version!'>
-      <Section>
+      <Section id='hero'>
         <HeroContainer>
           <div>
             <SectionTitle>Hi, I'm James</SectionTitle>
@@ -38,26 +38,65 @@ const Home: NextPage = () => {
           </div>
         </HeroContainer>
       </Section>
-      <Services id='services'>
+      <ServicesSection id='services'>
         <Section>
           <SectionTitle>Core Services</SectionTitle>
           <h2 style={{ color: 'var(--color-text-headings-dark)' }}>
             Everything you need to grow online
           </h2>
           <ServicesBlurbs>
-            <Blurb>Service 1</Blurb>
-            <Blurb>Service 1</Blurb>
-            <Blurb>Service 1</Blurb>
+            <Blurb>
+              <Image
+                src='/images/web-design-icon.png'
+                alt='Website Design'
+                width='100%'
+                height='100%'
+              />
+              <h5>Website Design</h5>
+              <p>
+                Modern, responsive websites that convert and are designed for
+                growth. I can redesign your current site or build something new
+                from the ground up.
+              </p>
+            </Blurb>
+            <Blurb>
+              <Image
+                src='/images/web-design-icon.png'
+                alt='Website Design'
+                width='100%'
+                height='100%'
+              />
+              <h5>Website Design</h5>
+              <p>
+                Modern, responsive websites that convert and are designed for
+                growth. I can redesign your current site or build something new
+                from the ground up.
+              </p>
+            </Blurb>
+            <Blurb>
+              <Image
+                src='/images/web-design-icon.png'
+                alt='Website Design'
+                width='100%'
+                height='100%'
+              />
+              <h5>Website Design</h5>
+              <p>
+                Modern, responsive websites that convert and are designed for
+                growth. I can redesign your current site or build something new
+                from the ground up.
+              </p>
+            </Blurb>
           </ServicesBlurbs>
         </Section>
-      </Services>
+      </ServicesSection>
     </Layout>
   );
 };
 
 export default Home;
 
-const HeroContainer = styled.section`
+const HeroContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(490px, 1fr));
@@ -67,8 +106,13 @@ const HeroContainer = styled.section`
   padding-bottom: var(--section-padding);
 `;
 
-const Services = styled.section`
-  background-color: var(--color-dark-background);
+const ServicesSection = styled.section`
+  background-image: linear-gradient(
+      0deg,
+      rgba(32, 47, 56, 0.86) 0%,
+      #202f38 100%
+    ),
+    url('/images/web-services-bg.jpg');
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 `;
