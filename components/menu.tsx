@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Menu = () => {
+const MainMenu = () => {
   return (
     <ul>
       <li>
@@ -28,13 +28,31 @@ const Menu = () => {
           <a>About</a>
         </Link>
       </li>
-      <li className='menu-cta'>
-        <Link href='/contact'>
-          <a>Get Started</a>
+    </ul>
+  );
+};
+
+const LegalMenu = () => {
+  return (
+    <ul>
+      <li>
+        <Link href='/privacy-policy'>
+          <a>Privacy Policy</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/terms-and-conditions'>
+          <a>Terms & Conditions</a>
+        </Link>
+      </li>
+      <li>
+        <Link href='/disclaimer'>
+          <a>Disclaimer</a>
         </Link>
       </li>
     </ul>
   );
 };
 
-export default Menu;
+export default MainMenu;
+export { LegalMenu };

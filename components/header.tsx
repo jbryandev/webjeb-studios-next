@@ -1,8 +1,10 @@
-import Menu from './menu';
+import MainMenu from './menu';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import Section from './section';
+import Button from './button';
+import BREAKPOINTS from '../constants';
 
 const Header = () => {
   return (
@@ -19,9 +21,14 @@ const Header = () => {
               />
             </a>
           </Link>
-          <MenuWrapper>
-            <Menu />
-          </MenuWrapper>
+          <MenuContainer>
+            <MenuWrapper>
+              <MainMenu />
+            </MenuWrapper>
+            <Button href='/contact' variant='primary'>
+              Get started
+            </Button>
+          </MenuContainer>
         </HeaderContainer>
       </Section>
     </StyledHeader>
@@ -32,28 +39,38 @@ export default Header;
 
 const StyledHeader = styled.header`
   position: sticky;
+  width: 100%;
   top: 0;
   z-index: 5;
   background-color: var(--color-light-background);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+
+  Section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 `;
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+`;
+
+const MenuContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: right;
+
+  @media (max-width: ${BREAKPOINTS.tablet}) {
+    display: none;
+  }
 `;
 
 const MenuWrapper = styled.div`
   li {
     display: inline;
     margin-right: 2.4rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
   a {
     text-decoration: none;
@@ -66,21 +83,5 @@ const MenuWrapper = styled.div`
       opacity: 0.7;
       transition: opacity 0.4s ease-in-out;
     }
-  }
-  li.menu-cta a {
-    color: #fff;
-    font-weight: 700;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    background-color: var(--color-primary);
-    padding: 1.1rem 1.6rem 1.1rem 1.6rem;
-    border-radius: 3px;
-    transition: background-color 0.4s ease-in-out;
-
-    &:hover {
-      opacity: 1;
-      background-color: var(--color-secondary);
-      transition: background-color 0.4s ease-in-out;
   }
 `;

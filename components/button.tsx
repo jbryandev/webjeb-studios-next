@@ -34,9 +34,10 @@ const StyledButton = styled.a`
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 1.1rem 1.6rem 1.1rem 1.6rem;
+  padding: 0.7rem 1.8rem;
   border: 2px solid;
   border-radius: 3px;
+  display: inline-block;
 `;
 
 const PrimaryButton = styled(StyledButton)`

@@ -1,35 +1,65 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 type Props = {
   children?: ReactNode;
-  image_src?: string;
-  image_alt?: string;
-  title?: string;
+  colorMode?: string;
+  id?: string;
 };
 
-const Blurb = ({ children, image_src, image_alt, title }: Props) => (
-  <StyledBlurb>{children}</StyledBlurb>
-);
+const Blurb = ({ children, colorMode, id }: Props) => {
+  if (colorMode === 'dark') {
+    return <DarkBlurb id={id}>{children}</DarkBlurb>;
+  } else {
+    return <LightBlurb id={id}>{children}</LightBlurb>;
+  }
+};
 
 export default Blurb;
 
 const StyledBlurb = styled.div`
   display: block;
   width: 100%;
-  padding: var(--document-padding);
+  max-width: 65ch;
 
   h5 {
-    color: var(--color-text-headings-dark);
-    font-size: 2.3em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   p {
-    color: var(--color-text-body-dark);
     font-size: 2em;
+  }
+
+  a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--color-primary);
+
+    &:hover {
+      text-decoration: underline;
   }
 
   img {
     max-width: 40%;
+`;
+
+const DarkBlurb = styled(StyledBlurb)`
+  h5 {
+    color: var(--color-text-headings-dark);
+  }
+
+  p {
+    color: var(--color-text-body-dark);
+  }
+`;
+
+const LightBlurb = styled(StyledBlurb)`
+  h5 {
+    color: var(--color-text-headings);
+  }
+
+  p {
+    color: var(--color-text-body);
+  }
 `;

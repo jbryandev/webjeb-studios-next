@@ -18,4 +18,6 @@ const StyledSection = styled.section`
   margin-right: auto;
   padding-left: var(--document-padding);
   padding-right: var(--document-padding);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 `;
