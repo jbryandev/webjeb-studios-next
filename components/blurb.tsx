@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 type Props = {
   children?: ReactNode;
-  colorMode?: string;
   id?: string;
+  colorMode?: string;
 };
 
-const Blurb = ({ children, colorMode, id }: Props) => {
-  if (colorMode === 'dark') {
-    return <DarkBlurb id={id}>{children}</DarkBlurb>;
-  } else {
-    return <LightBlurb id={id}>{children}</LightBlurb>;
-  }
+const Blurb = ({ children, id, colorMode }: Props) => {
+  return (
+    <StyledBlurb id={id} colorMode={colorMode}>
+      {children}
+    </StyledBlurb>
+  );
 };
 
 export default Blurb;
@@ -42,24 +42,5 @@ const StyledBlurb = styled.div`
 
   img {
     max-width: 40%;
-`;
-
-const DarkBlurb = styled(StyledBlurb)`
-  h5 {
-    color: var(--color-text-headings-dark);
-  }
-
-  p {
-    color: var(--color-text-body-dark);
-  }
-`;
-
-const LightBlurb = styled(StyledBlurb)`
-  h5 {
-    color: var(--color-text-headings);
-  }
-
-  p {
-    color: var(--color-text-body);
   }
 `;
