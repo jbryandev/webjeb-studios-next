@@ -2,35 +2,32 @@ import MainMenu from './menu';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import Section from './section';
 import Button from './button';
 import BREAKPOINTS from '../constants';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Section>
-        <HeaderContainer>
-          <Link href={'/'}>
-            <a>
-              <Image
-                src='/images/webjeb-studios-logo.png'
-                alt='Webjeb Studios Logo'
-                width='169'
-                height='47'
-              />
-            </a>
-          </Link>
-          <MenuContainer>
-            <MenuWrapper>
-              <MainMenu />
-            </MenuWrapper>
-            <Button href='/contact' variant='primary'>
-              Get started
-            </Button>
-          </MenuContainer>
-        </HeaderContainer>
-      </Section>
+      <HeaderContainer>
+        <Link href={'/'}>
+          <a>
+            <Image
+              src='/images/webjeb-studios-logo.png'
+              alt='Webjeb Studios Logo'
+              width='169'
+              height='47'
+            />
+          </a>
+        </Link>
+        <MenuContainer>
+          <MenuWrapper>
+            <MainMenu />
+          </MenuWrapper>
+          <Button href='/contact' variant='primary'>
+            Get started
+          </Button>
+        </MenuContainer>
+      </HeaderContainer>
     </StyledHeader>
   );
 };
@@ -44,17 +41,19 @@ const StyledHeader = styled.header`
   z-index: 5;
   background-color: var(--color-light-background);
   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-
-  Section {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
 `;
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: var(--document-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--document-padding);
+  padding-right: var(--document-padding);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 `;
 
 const MenuContainer = styled.div`

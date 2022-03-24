@@ -4,15 +4,18 @@ import styled from 'styled-components';
 type Props = {
   children?: ReactNode;
   id?: string;
+  styles?: {};
 };
 
-const Section = ({ children, id }: Props) => (
-  <StyledSection id={id}>{children}</StyledSection>
+const Section = ({ children, id, styles }: Props) => (
+  <section id={id} style={styles}>
+    <SectionContainer>{children}</SectionContainer>
+  </section>
 );
 
 export default Section;
 
-const StyledSection = styled.section`
+const SectionContainer = styled.div`
   max-width: var(--document-max-width);
   margin-left: auto;
   margin-right: auto;

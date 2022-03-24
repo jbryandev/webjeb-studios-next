@@ -42,61 +42,67 @@ const Home: NextPage = () => {
           </div>
         </HeroContainer>
       </Section>
-      <Services id='services'>
-        <Section>
-          <SectionTitle>Core Services</SectionTitle>
-          <h2 style={{ color: 'var(--color-text-headings-dark)' }}>
-            Everything you need to grow online
-          </h2>
-          <ServiceBlurbs>
-            <Blurb id='web-design' colorMode='dark'>
-              <Image
-                src='/images/web-design-icon.png'
-                alt='Website Design'
-                width='100%'
-                height='100%'
-              />
-              <h5>Website Design</h5>
-              <p>
-                Modern, responsive websites that convert and are designed for
-                growth. I can redesign your current site or build something new
-                from the ground up.
-              </p>
-            </Blurb>
-            <Blurb id='website-care-plans' colorMode='dark'>
-              <Image
-                src='/images/care-plans-icon.png'
-                alt='Website Care Plans'
-                width='100%'
-                height='100%'
-              />
-              <h5>Website Care Plans</h5>
-              <p>
-                Keep your site maintained, secure, backed up, and performing at
-                its very best with a website care plan that includes monthly
-                reporting on traffic and page views.
-              </p>
-            </Blurb>
-            <Blurb id='seo-boost' colorMode='dark'>
-              <Image
-                src='/images/seo-boost-icon.png'
-                alt='SEO Boost'
-                width='100%'
-                height='100%'
-              />
-              <h5>SEO Boost</h5>
-              <p>
-                Optimize your site for search so that your audience finds you
-                first. Get the <em>right</em> traffic to your website (folks
-                ready to buy from you), not just more traffic.
-              </p>
-            </Blurb>
-          </ServiceBlurbs>
-          <Button href='/contact' variant='primary'>
-            Get started
-          </Button>
-        </Section>
-      </Services>
+      <Section
+        id='services'
+        styles={{
+          backgroundImage:
+            'linear-gradient(0deg, rgba(32, 47, 56, 0.86) 0%, #202f38 100%), url(/images/web-services-bg.jpg);',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }}
+      >
+        <SectionTitle>Core Services</SectionTitle>
+        <h2 style={{ color: 'var(--color-text-headings-dark)' }}>
+          Everything you need to grow online
+        </h2>
+        <ServiceBlurbs>
+          <Blurb id='web-design' colorMode='dark'>
+            <Image
+              src='/images/web-design-icon.png'
+              alt='Website Design'
+              width='100%'
+              height='100%'
+            />
+            <h5>Website Design</h5>
+            <p>
+              Modern, responsive websites that convert and are designed for
+              growth. I can redesign your current site or build something new
+              from the ground up.
+            </p>
+          </Blurb>
+          <Blurb id='website-care-plans' colorMode='dark'>
+            <Image
+              src='/images/care-plans-icon.png'
+              alt='Website Care Plans'
+              width='100%'
+              height='100%'
+            />
+            <h5>Website Care Plans</h5>
+            <p>
+              Keep your site maintained, secure, backed up, and performing at
+              its very best with a website care plan that includes monthly
+              reporting on traffic and page views.
+            </p>
+          </Blurb>
+          <Blurb id='seo-boost' colorMode='dark'>
+            <Image
+              src='/images/seo-boost-icon.png'
+              alt='SEO Boost'
+              width='100%'
+              height='100%'
+            />
+            <h5>SEO Boost</h5>
+            <p>
+              Optimize your site for search so that your audience finds you
+              first. Get the <em>right</em> traffic to your website (folks ready
+              to buy from you), not just more traffic.
+            </p>
+          </Blurb>
+        </ServiceBlurbs>
+        <Button href='/contact' variant='primary'>
+          Get started
+        </Button>
+      </Section>
       <Section id='features'>
         <SectionTitle>What you can expect</SectionTitle>
         <h2>All the features to make you stand out</h2>
@@ -253,17 +259,6 @@ const HeroContainer = styled.div`
   );
   grid-gap: var(--document-padding);
   justify-items: center;
-`;
-
-const Services = styled.section`
-  background-image: linear-gradient(
-      0deg,
-      rgba(32, 47, 56, 0.86) 0%,
-      #202f38 100%
-    ),
-    url('/images/web-services-bg.jpg');
-  background-size: cover;
-  background-position: center;
 `;
 
 const ServiceBlurbs = styled.div`

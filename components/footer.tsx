@@ -6,37 +6,48 @@ import Section from './section';
 
 const Footer = () => {
   return (
-    <StyledFooter>
-      <Section>
-        <FooterContainer>
-          <Link href={'/'}>
-            <a>
-              <Image
-                src='/images/webjeb-studios-logo-wt.png'
-                alt='Webjeb Studios Logo'
-                width='169'
-                height='47'
-              />
-            </a>
-          </Link>
-          <MenuWrapper>
-            <StyledH4>Menu</StyledH4>
-            <MainMenu />
-          </MenuWrapper>
-          <MenuWrapper>
-            <StyledH4>Legal</StyledH4>
-            <LegalMenu />
-          </MenuWrapper>
-        </FooterContainer>
-      </Section>
-    </StyledFooter>
+    <FooterSection
+      id='footer'
+      styles={{
+        backgroundColor: 'var(--color-dark-background)',
+      }}
+    >
+      <FooterContainer>
+        <Link href={'/'}>
+          <a>
+            <Image
+              src='/images/webjeb-studios-logo-wt.png'
+              alt='Webjeb Studios Logo'
+              width='169'
+              height='47'
+            />
+          </a>
+        </Link>
+        <MenuWrapper>
+          <StyledH4>Menu</StyledH4>
+          <MainMenu />
+        </MenuWrapper>
+        <MenuWrapper>
+          <StyledH4>Legal</StyledH4>
+          <LegalMenu />
+        </MenuWrapper>
+      </FooterContainer>
+      <BottomBarContainer>
+        <p>
+          &copy; {new Date().getFullYear()} Webjeb Studios. All rights reserved.
+        </p>
+      </BottomBarContainer>
+    </FooterSection>
   );
 };
 
 export default Footer;
 
-const StyledFooter = styled.footer`
-  background-color: var(--color-dark-background);
+const FooterSection = styled(Section)`
+  &:sectioncontainer {
+    padding-top: var(--section-padding);
+    padding-bottom: 0;
+  }
 `;
 
 const FooterContainer = styled.div`
@@ -77,3 +88,5 @@ const MenuWrapper = styled.div`
     color: var(--color-text-body-dark);
   }
 `;
+
+const BottomBarContainer = styled.div``;
