@@ -271,11 +271,15 @@ const ServiceBlurbs = styled.div`
   padding-bottom: var(--document-padding);
   display: grid;
   grid-template-columns: repeat(
-    auto-fit,
+    auto-fill,
     minmax(
       clamp(
-        100%/ (3 + 1) + 0.1%,
-        (var(--breakpoint-tablet) - 100vw) * 1000,
+        clamp(
+          100%/ (3 + 1) + 0.1%,
+          (var(--breakpoint-tablet) - 100vw) * 1000,
+          100%/ (2 + 1) + 0.1%
+        ),
+        (var(--breakpoint-mobile) - 100vw) * 1000,
         100%
       ),
       1fr
