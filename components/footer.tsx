@@ -6,11 +6,10 @@ import Section from './section';
 
 const Footer = () => {
   return (
-    <FooterSection
+    <Section
       id='footer'
-      styles={{
-        backgroundColor: 'var(--color-dark-background)',
-      }}
+      bgColor='var(--color-dark-background)'
+      bottomPadding='0'
     >
       <FooterContainer>
         <Link href={'/'}>
@@ -37,18 +36,11 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Webjeb Studios. All rights reserved.
         </p>
       </BottomBarContainer>
-    </FooterSection>
+    </Section>
   );
 };
 
 export default Footer;
-
-const FooterSection = styled(Section)`
-  &:sectioncontainer {
-    padding-top: var(--section-padding);
-    padding-bottom: 0;
-  }
-`;
 
 const FooterContainer = styled.div`
   display: grid;
@@ -64,6 +56,7 @@ const FooterContainer = styled.div`
     )
   );
   grid-gap: var(--document-padding);
+  padding-bottom: var(--document-padding);
 `;
 
 const StyledH4 = styled.h4`
@@ -89,4 +82,12 @@ const MenuWrapper = styled.div`
   }
 `;
 
-const BottomBarContainer = styled.div``;
+const BottomBarContainer = styled.div`
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+
+  p {
+    margin-bottom: 0;
+  }
+`;

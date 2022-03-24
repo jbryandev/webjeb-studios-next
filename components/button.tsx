@@ -5,7 +5,7 @@ import Link from 'next/link';
 type Props = {
   children?: ReactNode;
   href?: string;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
   styles?: {};
 };
 
@@ -14,6 +14,12 @@ const Button = ({ children, href, variant, styles }: Props) => {
     return (
       <Link href={href} passHref>
         <SecondaryButton style={styles}>{children}</SecondaryButton>
+      </Link>
+    );
+  } else if (variant === 'tertiary') {
+    return (
+      <Link href={href} passHref>
+        <TertiaryButton style={styles}>{children}</TertiaryButton>
       </Link>
     );
   } else {
@@ -67,6 +73,23 @@ const SecondaryButton = styled(StyledButton)`
     color: var(--color-primary);
     border-color: var(--color-primary);
     transition-property: color, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+`;
+
+const TertiaryButton = styled(StyledButton)`
+  color: var(--color-primary);
+  border-color: var(--color-light-background);
+  background-color: var(--color-light-background);
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    color: var(--color-text-headings-dark);
+    background-color: var(--color-dark-background);
+    border-color: var(--color-dark-background);
+    transition-property: background-color, border-color, color;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
 `;

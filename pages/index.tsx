@@ -6,6 +6,7 @@ import Button from '../components/button';
 import Section from '../components/section';
 import SectionTitle from '../components/section-title';
 import Blurb from '../components/blurb';
+import FooterCTA from '../components/footer-cta';
 
 const Home: NextPage = () => {
   return (
@@ -44,12 +45,13 @@ const Home: NextPage = () => {
       </Section>
       <Section
         id='services'
-        styles={{
+        customStyles={{
           backgroundImage:
-            'linear-gradient(0deg, rgba(32, 47, 56, 0.86) 0%, #202f38 100%), url(/images/web-services-bg.jpg);',
+            'linear-gradient(0deg, rgba(32, 47, 56, 0.86) 0%, var(--color-dark-background) 100%), url(/images/web-services-bg.jpg);',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
+        bgColor='var(--color-dark-background)'
       >
         <SectionTitle>Core Services</SectionTitle>
         <h2 style={{ color: 'var(--color-text-headings-dark)' }}>
@@ -215,29 +217,24 @@ const Home: NextPage = () => {
           </Blurb>
         </FeatureBlurbs>
       </Section>
-      <RecentWork id='work'>
-        <Section>
-          <div style={{ textAlign: 'center' }}>
-            <h2>Recent Work</h2>
-            <Divider />
-          </div>
-        </Section>
-      </RecentWork>
-      <Testimonials id='testimonials'>
-        <Section>
-          <div style={{ textAlign: 'center' }}>
-            <h2>What my clients say</h2>
-            <Divider />
-          </div>
-        </Section>
-      </Testimonials>
-      <FoundersNote>
-        <Section>
-          <h4 style={{ color: 'var(--color-text-headings-dark)' }}>
-            A message from the founder:
-          </h4>
-        </Section>
-      </FoundersNote>
+      <Section id='recent-work' bgColor='var(--color-ltgray-background)'>
+        <div style={{ textAlign: 'center' }}>
+          <h2>Recent Work</h2>
+          <Divider />
+        </div>
+      </Section>
+      <Section id='testimonials' bgColor='var(--color-mdgray-background)'>
+        <div style={{ textAlign: 'center' }}>
+          <h2>What my clients say</h2>
+          <Divider />
+        </div>
+      </Section>
+      <Section id='founders-note' bgColor='var(--color-dark-background)'>
+        <h4 style={{ color: 'var(--color-text-headings-dark)' }}>
+          A message from the founder:
+        </h4>
+      </Section>
+      <FooterCTA />
     </Layout>
   );
 };
@@ -304,21 +301,9 @@ const FeatureBlurbs = styled.div`
   grid-gap: var(--document-padding);
 `;
 
-const RecentWork = styled.section`
-  background-color: var(--color-ltgray-background);
-`;
-
 const Divider = styled.div`
   display: inline-block;
   width: 200px;
   height: 5px;
   background-color: var(--color-primary);
-`;
-
-const Testimonials = styled.section`
-  background-color: var(--color-mdgray-background);
-`;
-
-const FoundersNote = styled.section`
-  background-color: var(--color-dark-background);
 `;

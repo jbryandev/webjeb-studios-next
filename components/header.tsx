@@ -4,10 +4,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from './button';
 import BREAKPOINTS from '../constants';
+import Section from './section';
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <Section
+      id='header'
+      bgColor='var(--color-light-background)'
+      topPadding='1.5rem'
+      bottomPadding='1.5rem'
+      customStyles={{
+        position: 'sticky',
+        width: '100%',
+        top: '0',
+        zIndex: '5',
+        boxShadow: '0 0 7px rgba(0, 0, 0, 0.1)',
+      }}
+    >
       <HeaderContainer>
         <Link href={'/'}>
           <a>
@@ -28,32 +41,25 @@ const Header = () => {
           </Button>
         </MenuContainer>
       </HeaderContainer>
-    </StyledHeader>
+    </Section>
   );
 };
 
 export default Header;
 
-const StyledHeader = styled.header`
-  position: sticky;
-  width: 100%;
-  top: 0;
-  z-index: 5;
-  background-color: var(--color-light-background);
-  box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-`;
+// const StyledHeader = styled.header`
+//   position: sticky;
+//   width: 100%;
+//   top: 0;
+//   z-index: 5;
+//   background-color: var(--color-light-background);
+//   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
+// `;
 
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--document-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--document-padding);
-  padding-right: var(--document-padding);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 `;
 
 const MenuContainer = styled.div`
