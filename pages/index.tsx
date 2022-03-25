@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         id='services'
         customStyles={{
           backgroundImage:
-            'linear-gradient(0deg, rgba(32, 47, 56, 0.86) 0%, var(--color-dark-background) 100%), url(/images/web-services-bg.jpg);',
+            'linear-gradient(0deg, rgba(32, 47, 56, 0.86) 0%, var(--color-dark-background) 100%), url(/images/web-services-bg.jpg)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -339,7 +339,21 @@ const Divider = styled.div`
 
 const FoundersNote = styled.div`
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      clamp(
+        clamp(
+          100%/ (3 + 1) + 0.1%,
+          (var(--breakpoint-tablet) - 100vw) * 1000,
+          100%/ (2 + 1) + 0.1%
+        ),
+        (var(--breakpoint-mobile) - 100vw) * 1000,
+        100%
+      ),
+      1fr
+    )
+  );
   grid-gap: var(--document-padding);
   justify-items: center;
 
