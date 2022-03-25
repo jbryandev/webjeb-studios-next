@@ -230,9 +230,38 @@ const Home: NextPage = () => {
         </div>
       </Section>
       <Section id='founders-note' bgColor='var(--color-dark-background)'>
-        <h4 style={{ color: 'var(--color-text-headings-dark)' }}>
-          A message from the founder:
-        </h4>
+        <FoundersNote>
+          <div>
+            <Image
+              src='/images/james-bryan-founder.png'
+              alt='James Bryan, founder of Webjeb Studios'
+              width={350}
+              height={480}
+            />
+          </div>
+          <div>
+            <h4>A message from the founder:</h4>
+            <p>
+              With over two decades of web design experience, I understand the
+              confusion and apprehension that comes with building a web presence
+              because I've been there. Between the hosting, design, content
+              creation, SEO, and security, it can be an overwhelming process but
+              I'm here to guide you through it.
+            </p>
+            <p>
+              My goal is for your website to become the cornerstone of your
+              business. I help you get there through a proven, strategy-first
+              approach that clarifies your message, connects with your audience,
+              and guides them to action.
+            </p>
+            <p>
+              I'm a solo designer backed by a professional network of
+              specialized experts, so you get the personalized and caring
+              service of a freelancer without the schedule delays, and the
+              horsepower of an agency without feeling like a number.
+            </p>
+          </div>
+        </FoundersNote>
       </Section>
       <FooterCTA />
     </Layout>
@@ -306,4 +335,19 @@ const Divider = styled.div`
   width: 200px;
   height: 5px;
   background-color: var(--color-primary);
+`;
+
+const FoundersNote = styled.div`
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-gap: var(--document-padding);
+  justify-items: center;
+
+  h4 {
+    color: var(--color-text-headings-dark);
+  }
+
+  p {
+    color: var(--color-text-body-dark);
+  }
 `;
