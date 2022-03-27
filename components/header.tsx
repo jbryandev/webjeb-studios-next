@@ -47,15 +47,6 @@ const Header = () => {
 
 export default Header;
 
-// const StyledHeader = styled.header`
-//   position: sticky;
-//   width: 100%;
-//   top: 0;
-//   z-index: 5;
-//   background-color: var(--color-light-background);
-//   box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);
-// `;
-
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;

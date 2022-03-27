@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 type Props = {
   children?: ReactNode;
-  href?: string;
+  href: string;
   variant?: 'primary' | 'secondary' | 'tertiary';
   styles?: {};
 };
