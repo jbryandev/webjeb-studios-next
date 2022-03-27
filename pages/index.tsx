@@ -52,7 +52,6 @@ const Home: NextPage = () => {
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
-        bgColor='var(--color-dark-background)'
       >
         <SectionTitle>Core Services</SectionTitle>
         <h2 style={{ color: 'var(--color-text-headings-dark)' }}>
@@ -218,7 +217,10 @@ const Home: NextPage = () => {
           </Blurb>
         </FeatureBlurbs>
       </Section>
-      <Section id='recent-work' bgColor='var(--color-ltgray-background)'>
+      <Section
+        id='recent-work'
+        customStyles={{ backgroundColor: 'var(--color-ltgray-background)' }}
+      >
         <div style={{ textAlign: 'center' }}>
           <h2>Recent Work</h2>
           <Divider />
@@ -244,14 +246,20 @@ const Home: NextPage = () => {
           </FeaturedProjects>
         </div>
       </Section>
-      <Section id='testimonials' bgColor='var(--color-mdgray-background)'>
+      <Section
+        id='testimonials'
+        customStyles={{ backgroundColor: 'var(--color-mdgray-background)' }}
+      >
         <div style={{ textAlign: 'center' }}>
           <h2>What my clients say</h2>
           <Divider />
           <p>COMING SOON!</p>
         </div>
       </Section>
-      <Section id='founders-note' bgColor='var(--color-dark-background)'>
+      <Section
+        id='founders-note'
+        customStyles={{ backgroundColor: 'var(--color-dark-background)' }}
+      >
         <FoundersNote>
           <div>
             <Image

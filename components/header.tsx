@@ -10,13 +10,12 @@ const Header = () => {
   return (
     <Section
       id='header'
-      bgColor='var(--color-light-background)'
-      topPadding='1.5rem'
-      bottomPadding='1.5rem'
       customStyles={{
         position: 'sticky',
         width: '100%',
         top: '0',
+        paddingTop: '1.5rem',
+        paddingBottom: '1.5rem',
         zIndex: '5',
         boxShadow: '0 0 7px rgba(0, 0, 0, 0.1)',
       }}

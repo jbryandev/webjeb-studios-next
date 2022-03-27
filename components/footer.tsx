@@ -8,8 +8,10 @@ const Footer = () => {
   return (
     <Section
       id='footer'
-      bgColor='var(--color-dark-background)'
-      bottomPadding='0'
+      customStyles={{
+        backgroundColor: 'var(--color-dark-background)',
+        paddingBottom: 0,
+      }}
     >
       <FooterContainer>
         <Link href={'/'}>
