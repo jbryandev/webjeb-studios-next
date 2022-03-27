@@ -36,8 +36,8 @@ const FooterContainer = styled.div`
   justify-content: center;
   color: var(--color-text-headings-dark);
   text-align: center;
-  padding-top: var(--document-padding);
-  padding-bottom: var(--document-padding);
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 
   h2 {
     color: var(--color-text-headings-dark);

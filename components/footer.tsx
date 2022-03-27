@@ -33,7 +33,8 @@ const Footer = () => {
       </FooterContainer>
       <BottomBarContainer>
         <p>
-          &copy; {new Date().getFullYear()} Webjeb Studios. All rights reserved.
+          &copy; {new Date().getFullYear()} Webjeb Studios | Designed in Edmond,
+          OK
         </p>
       </BottomBarContainer>
     </Section>

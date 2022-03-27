@@ -7,6 +7,7 @@ import Section from '../components/section';
 import SectionTitle from '../components/section-title';
 import Blurb from '../components/blurb';
 import FooterCTA from '../components/footer-cta';
+import BREAKPOINTS from '../constants';
 
 const Home: NextPage = () => {
   return (
@@ -221,12 +222,33 @@ const Home: NextPage = () => {
         <div style={{ textAlign: 'center' }}>
           <h2>Recent Work</h2>
           <Divider />
+          <FeaturedProjects>
+            <FeaturedProject>
+              <Image
+                src='/images/arculum-logo.jpeg'
+                alt='Arculum Computers'
+                width={400}
+                height={400}
+              />
+              <h5>Arculum Computers</h5>
+            </FeaturedProject>
+            <FeaturedProject>
+              <Image
+                src='/images/mark-bryan-construction.jpeg'
+                alt='Mark Bryan Construction'
+                width={400}
+                height={400}
+              />
+              <h5>Mark Bryan Construction</h5>
+            </FeaturedProject>
+          </FeaturedProjects>
         </div>
       </Section>
       <Section id='testimonials' bgColor='var(--color-mdgray-background)'>
         <div style={{ textAlign: 'center' }}>
           <h2>What my clients say</h2>
           <Divider />
+          <p>COMING SOON!</p>
         </div>
       </Section>
       <Section id='founders-note' bgColor='var(--color-dark-background)'>
@@ -285,6 +307,13 @@ const HeroContainer = styled.div`
   );
   grid-gap: var(--document-padding);
   justify-items: center;
+
+  @media (max-width: ${BREAKPOINTS.tablet}) {
+    /* Makes right content appear above left content in single column layout */
+    div:last-child {
+      order: -1;
+    }
+  }
 `;
 
 const ServiceBlurbs = styled.div`
@@ -335,27 +364,38 @@ const Divider = styled.div`
   width: 200px;
   height: 5px;
   background-color: var(--color-primary);
+  margin-bottom: var(--document-padding);
+`;
+
+const FeaturedProjects = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--document-padding);
+`;
+
+const FeaturedProject = styled.div`
+  text-align: center;
 `;
 
 const FoundersNote = styled.div`
   display: grid;
   grid-template-columns: repeat(
-    auto-fill,
+    auto-fit,
     minmax(
       clamp(
-        clamp(
-          100%/ (3 + 1) + 0.1%,
-          (var(--breakpoint-tablet) - 100vw) * 1000,
-          100%/ (2 + 1) + 0.1%
-        ),
-        (var(--breakpoint-mobile) - 100vw) * 1000,
+        100%/ (2 + 1) + 0.1%,
+        (var(--breakpoint-tablet) - 100vw) * 1000,
         100%
       ),
       1fr
     )
   );
   grid-gap: var(--document-padding);
-  justify-items: center;
+
+  div:first-child {
+    justify-self: center;
+  }
 
   h4 {
     color: var(--color-text-headings-dark);
