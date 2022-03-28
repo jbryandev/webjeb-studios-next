@@ -70,7 +70,7 @@ const MenuWrapper = styled.div`
   a {
     text-decoration: none;
     color: var(--color-text-headings);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.8em;
     transition: opacity 0.4s ease-in-out;
 
