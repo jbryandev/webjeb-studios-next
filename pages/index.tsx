@@ -50,7 +50,11 @@ const Home: NextPage = () => {
             </Button>
           </div>
           <div>
-            <Image src={heroImg} alt='James Bryan, founder of Webjeb Studios' />
+            <Image
+              src={heroImg}
+              alt='James Bryan, founder of Webjeb Studios'
+              placeholder='blur'
+            />
           </div>
         </HeroContainer>
       </Section>
