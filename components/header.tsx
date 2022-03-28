@@ -19,7 +19,6 @@ const Header = () => {
         paddingBottom: '1.5rem',
         zIndex: '5',
         boxShadow: '0 0 7px rgba(0, 0, 0, 0.1)',
-        marginBottom: 83,
       }}
     >
       <HeaderContainer>
