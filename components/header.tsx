@@ -24,8 +24,7 @@ const Header = () => {
       <HeaderContainer>
         <Link href={'/'}>
           <a>
-            Webjeb Studios
-            {/* <Image src={logo} alt='Webjeb Studios Logo' placeholder='blur' /> */}
+            <Image src={logo} alt='Webjeb Studios Logo' placeholder='blur' />
           </a>
         </Link>
         <MenuContainer>
