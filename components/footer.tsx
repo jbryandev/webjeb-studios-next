@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import Section from './section';
+import logo from '../public/images/webjeb-studios-logo-wt.png';
 
 const Footer = () => {
   return (
@@ -16,12 +17,7 @@ const Footer = () => {
       <FooterContainer>
         <Link href={'/'}>
           <a>
-            <Image
-              src='/images/webjeb-studios-logo-wt.png'
-              alt='Webjeb Studios Logo'
-              width='169'
-              height='47'
-            />
+            <Image src={logo} alt='Webjeb Studios Logo' />
           </a>
         </Link>
         <MenuWrapper>

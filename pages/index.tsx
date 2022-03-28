@@ -8,6 +8,21 @@ import SectionTitle from '../components/section-title';
 import Blurb from '../components/blurb';
 import FooterCTA from '../components/footer-cta';
 import BREAKPOINTS from '../constants';
+import heroImg from '../public/images/hero-img.png';
+import webDesignIcon from '../public/images/web-design-icon.png';
+import carePlansIcon from '../public/images/care-plans-icon.png';
+import seoBoostIcon from '../public/images/seo-boost-icon.png';
+import mobileFriendlyIcon from '../public/images/mobile-friendly-icon.png';
+import conversionIcon from '../public/images/conversion-icon.png';
+import seoIcon from '../public/images/seo-icon.png';
+import strategyIcon from '../public/images/strategy-icon.png';
+import maintenanceIcon from '../public/images/maintenance-icon.png';
+import growthPlanIcon from '../public/images/growth-plan-icon.png';
+import trustedPartnerIcon from '../public/images/trusted-partner-icon.png';
+import empoweredIcon from '../public/images/empowered-icon.png';
+import arculumLogo from '../public/images/arculum-logo.jpeg';
+import mbcLogo from '../public/images/mark-bryan-construction.jpeg';
+import founderImage from '../public/images/james-bryan-founder.png';
 
 const Home: NextPage = () => {
   return (
@@ -35,12 +50,7 @@ const Home: NextPage = () => {
             </Button>
           </div>
           <div>
-            <Image
-              src='/images/hero-img.png'
-              alt='James Bryan, founder of Webjeb Studios'
-              width={543}
-              height={545}
-            />
+            <Image src={heroImg} alt='James Bryan, founder of Webjeb Studios' />
           </div>
         </HeroContainer>
       </Section>
@@ -60,7 +70,7 @@ const Home: NextPage = () => {
         <ServiceBlurbs>
           <Blurb id='web-design' colorMode='dark'>
             <Image
-              src='/images/web-design-icon.png'
+              src={webDesignIcon}
               alt='Website Design'
               width='100%'
               height='100%'
@@ -74,7 +84,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb id='website-care-plans' colorMode='dark'>
             <Image
-              src='/images/care-plans-icon.png'
+              src={carePlansIcon}
               alt='Website Care Plans'
               width='100%'
               height='100%'
@@ -88,7 +98,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb id='seo-boost' colorMode='dark'>
             <Image
-              src='/images/seo-boost-icon.png'
+              src={seoBoostIcon}
               alt='SEO Boost'
               width='100%'
               height='100%'
@@ -111,7 +121,7 @@ const Home: NextPage = () => {
         <FeatureBlurbs>
           <Blurb>
             <Image
-              src='/images/mobile-friendly-icon.png'
+              src={mobileFriendlyIcon}
               alt='Mobile Friendly'
               width='100%'
               height='100%'
@@ -124,7 +134,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/conversion-icon.png'
+              src={conversionIcon}
               alt='Designed for Conversion'
               width='100%'
               height='100%'
@@ -137,7 +147,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/seo-icon.png'
+              src={seoIcon}
               alt='Optimized for Search'
               width='100%'
               height='100%'
@@ -151,7 +161,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/strategy-icon.png'
+              src={strategyIcon}
               alt='Strategy Based Design'
               width='100%'
               height='100%'
@@ -164,7 +174,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/maintenance-icon.png'
+              src={maintenanceIcon}
               alt='Easy to Update & Maintain'
               width='100%'
               height='100%'
@@ -178,7 +188,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/growth-plan-icon.png'
+              src={growthPlanIcon}
               alt='Grows With Your Business'
               width='100%'
               height='100%'
@@ -191,7 +201,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/trusted-partner-icon.png'
+              src={trustedPartnerIcon}
               alt='Trusted Partnership'
               width='100%'
               height='100%'
@@ -204,7 +214,7 @@ const Home: NextPage = () => {
           </Blurb>
           <Blurb>
             <Image
-              src='/images/empowered-icon.png'
+              src={empoweredIcon}
               alt='Empowering Experience'
               width='100%'
               height='100%'
@@ -227,7 +237,7 @@ const Home: NextPage = () => {
           <FeaturedProjects>
             <FeaturedProject>
               <Image
-                src='/images/arculum-logo.jpeg'
+                src={arculumLogo}
                 alt='Arculum Computers'
                 width={400}
                 height={400}
@@ -236,7 +246,7 @@ const Home: NextPage = () => {
             </FeaturedProject>
             <FeaturedProject>
               <Image
-                src='/images/mark-bryan-construction.jpeg'
+                src={mbcLogo}
                 alt='Mark Bryan Construction'
                 width={400}
                 height={400}
@@ -263,10 +273,8 @@ const Home: NextPage = () => {
         <FoundersNote>
           <div>
             <Image
-              src='/images/james-bryan-founder.png'
+              src={founderImage}
               alt='James Bryan, founder of Webjeb Studios'
-              width={350}
-              height={480}
             />
           </div>
           <div>

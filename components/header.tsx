@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Button from './button';
 import BREAKPOINTS from '../constants';
 import Section from './section';
+import logo from '../public/images/webjeb-studios-logo.png';
 
 const Header = () => {
   return (
@@ -23,12 +24,7 @@ const Header = () => {
       <HeaderContainer>
         <Link href={'/'}>
           <a>
-            <Image
-              src='/images/webjeb-studios-logo.png'
-              alt='Webjeb Studios Logo'
-              width='169'
-              height='47'
-            />
+            <Image src={logo} alt='Webjeb Studios Logo' />
           </a>
         </Link>
         <MenuContainer>
