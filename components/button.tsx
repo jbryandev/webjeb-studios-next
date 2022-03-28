@@ -50,46 +50,46 @@ const PrimaryButton = styled(StyledButton)`
   color: #fff;
   border-color: var(--color-primary);
   background-color: var(--color-primary);
-  transition-property: background-color, border-color;
+  /* transition-property: background-color, border-color;
   transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
 
   &:hover {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
-    transition-property: background-color, border-color;
+    /* transition-property: background-color, border-color;
     transition-duration: 0.4s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
 `;
 
 const SecondaryButton = styled(StyledButton)`
   color: var(--color-secondary);
   border-color: var(--color-secondary);
-  transition-property: color, border-color;
+  /* transition-property: color, border-color;
   transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
 
   &:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
-    transition-property: color, border-color;
+    /* transition-property: color, border-color;
     transition-duration: 0.4s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
 `;
 
 const TertiaryButton = styled(StyledButton)`
   color: var(--color-primary);
   border-color: var(--color-light-background);
   background-color: var(--color-light-background);
-  transition-property: background-color, border-color, color;
+  /* transition-property: background-color, border-color, color;
   transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
 
   &:hover {
     color: var(--color-text-headings-dark);
     background-color: var(--color-dark-background);
     border-color: var(--color-dark-background);
-    transition-property: background-color, border-color, color;
+    /* transition-property: background-color, border-color, color;
     transition-duration: 0.4s;
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out; */
 `;
