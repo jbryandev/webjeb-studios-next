@@ -12,7 +12,7 @@ const Header = () => {
     <Section
       id='header'
       customStyles={{
-        position: 'relative',
+        position: 'sticky',
         width: '100%',
         top: '0',
         paddingTop: '1.5rem',
