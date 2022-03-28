@@ -282,7 +282,7 @@ const Home: NextPage = () => {
             />
           </div>
           <div>
-            <h4>A message from the founder:</h4>
+            <h5>A message from the founder:</h5>
             <p>
               With over two decades of web design experience, I understand the
               confusion and apprehension that comes with building a web presence
@@ -417,7 +417,7 @@ const FoundersNote = styled.div`
     justify-self: center;
   }
 
-  h4 {
+  h5 {
     color: var(--color-text-headings-dark);
   }
 

@@ -21,11 +21,11 @@ const Footer = () => {
           </a>
         </Link>
         <MenuWrapper>
-          <StyledH4>Menu</StyledH4>
+          <h5>Menu</h5>
           <MainMenu />
         </MenuWrapper>
         <MenuWrapper>
-          <StyledH4>Legal</StyledH4>
+          <h5>Legal</h5>
           <LegalMenu />
         </MenuWrapper>
       </FooterContainer>
@@ -58,11 +58,6 @@ const FooterContainer = styled.div`
   padding-bottom: var(--document-padding);
 `;
 
-const StyledH4 = styled.h4`
-  color: var(--color-text-body);
-  margin-bottom: 0.5em;
-`;
-
 const MenuWrapper = styled.div`
   ul {
     list-style: disc inside;
@@ -78,6 +73,10 @@ const MenuWrapper = styled.div`
     margin-left: -0.5em;
     text-decoration: none;
     color: var(--color-text-body-dark);
+  }
+  h5 {
+    color: var(--color-text-body);
+    margin-bottom: 0.5em;
   }
 `;
 

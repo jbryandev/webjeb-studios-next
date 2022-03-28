@@ -22,7 +22,7 @@ const StyledBlurb = styled.div<Props>`
   width: 100%;
   max-width: 65ch;
 
-  h5 {
+  h4 {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
   }
@@ -49,7 +49,7 @@ const StyledBlurb = styled.div<Props>`
 `;
 
 const darkModeMixin = css`
-  h5 {
+  h4 {
     color: var(--color-text-headings-dark);
   }
   p {
