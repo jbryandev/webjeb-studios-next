@@ -21,11 +21,11 @@ const Footer = () => {
           </a>
         </Link>
         <MenuWrapper>
-          <h5>Menu</h5>
+          <h4>Menu</h4>
           <MainMenu />
         </MenuWrapper>
         <MenuWrapper>
-          <h5>Legal</h5>
+          <h4>Legal</h4>
           <LegalMenu />
         </MenuWrapper>
       </FooterContainer>
@@ -74,10 +74,9 @@ const MenuWrapper = styled.div`
     text-decoration: none;
     color: var(--color-text-body-dark);
   }
-  h5 {
+  h4 {
     color: var(--color-text-body);
-    margin-bottom: 0.5em;
-  }
+  margin-bottom: 0.5em;
 `;
 
 const BottomBarContainer = styled.div`
