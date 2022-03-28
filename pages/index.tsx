@@ -78,6 +78,7 @@ const Home: NextPage = () => {
               alt='Website Design'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Website Design</h5>
             <p>
@@ -92,6 +93,7 @@ const Home: NextPage = () => {
               alt='Website Care Plans'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Website Care Plans</h5>
             <p>
@@ -106,6 +108,7 @@ const Home: NextPage = () => {
               alt='SEO Boost'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>SEO Boost</h5>
             <p>
@@ -129,6 +132,7 @@ const Home: NextPage = () => {
               alt='Mobile Friendly'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Mobile-Friendly</h5>
             <p>
@@ -142,6 +146,7 @@ const Home: NextPage = () => {
               alt='Designed for Conversion'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Designed for Conversion</h5>
             <p>
@@ -155,6 +160,7 @@ const Home: NextPage = () => {
               alt='Optimized for Search'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Optimized for Search</h5>
             <p>
@@ -169,6 +175,7 @@ const Home: NextPage = () => {
               alt='Strategy Based Design'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Strategy Based</h5>
             <p>
@@ -182,6 +189,7 @@ const Home: NextPage = () => {
               alt='Easy to Update & Maintain'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Easy to Update & Maintain</h5>
             <p>
@@ -196,6 +204,7 @@ const Home: NextPage = () => {
               alt='Grows With Your Business'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Grows With You</h5>
             <p>
@@ -209,6 +218,7 @@ const Home: NextPage = () => {
               alt='Trusted Partnership'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Trusted Partnership</h5>
             <p>
@@ -222,6 +232,7 @@ const Home: NextPage = () => {
               alt='Empowering Experience'
               width='100%'
               height='100%'
+              placeholder='blur'
             />
             <h5>Empowering Experience</h5>
             <p>
@@ -245,6 +256,7 @@ const Home: NextPage = () => {
                 alt='Arculum Computers'
                 width={400}
                 height={400}
+                placeholder='blur'
               />
               <h5>Arculum Computers</h5>
             </FeaturedProject>
@@ -254,6 +266,7 @@ const Home: NextPage = () => {
                 alt='Mark Bryan Construction'
                 width={400}
                 height={400}
+                placeholder='blur'
               />
               <h5>Mark Bryan Construction</h5>
             </FeaturedProject>
@@ -279,6 +292,7 @@ const Home: NextPage = () => {
             <Image
               src={founderImage}
               alt='James Bryan, founder of Webjeb Studios'
+              placeholder='blur'
             />
           </div>
           <div>
