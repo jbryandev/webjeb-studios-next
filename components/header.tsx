@@ -9,18 +9,7 @@ import logo from '../public/images/webjeb-studios-logo.png';
 
 const Header = () => {
   return (
-    <Section
-      id='header'
-      customStyles={{
-        position: 'sticky',
-        width: '100%',
-        top: '0',
-        paddingTop: '1.5rem',
-        paddingBottom: '1.5rem',
-        zIndex: '5',
-        boxShadow: '0 0 7px rgba(0, 0, 0, 0.1)',
-      }}
-    >
+    <Section id='header' customStyles={HeaderCustomStyles}>
       <HeaderContainer>
         <Link href={'/'}>
           <a>
@@ -41,6 +30,16 @@ const Header = () => {
 };
 
 export default Header;
+
+const HeaderCustomStyles = {
+  position: 'sticky',
+  width: '100%',
+  top: '0',
+  paddingTop: '1.5rem',
+  paddingBottom: '1.5rem',
+  zIndex: '5',
+  boxShadow: '0 0 7px rgba(0, 0, 0, 0.1)',
+};
 
 const HeaderContainer = styled.div`
   display: flex;

@@ -8,7 +8,7 @@ const FooterCTA = () => {
       id='footer-cta'
       customStyles={{
         backgroundImage:
-          'linear-gradient(90deg, rgba(242,105,34,0.8) 0%, var(--color-primary) 100%), url(/images/footer-cta-bg.jpg);',
+          'linear-gradient(90deg, rgba(242,105,34,0.8) 0%, var(--color-primary) 100%), url(/images/footer-cta-bg.jpg)',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}

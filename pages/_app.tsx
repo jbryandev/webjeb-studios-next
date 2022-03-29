@@ -22,6 +22,10 @@ const GlobalStyles = createGlobalStyle`
     --gutter-width: 16px;
     --breakpoint-mobile: ${BREAKPOINTS.mobile};
     --breakpoint-tablet: ${BREAKPOINTS.tablet};
+
+    @media (max-width: ${BREAKPOINTS.tablet}) {
+      --document-padding: 2rem;
+      --section-padding: 4rem;
   }
 `;
 
