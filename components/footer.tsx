@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Section from './section';
 import logo from '../public/images/webjeb-studios-logo-wt.png';
+import BREAKPOINTS from '../constants.js';
 
 const Footer = () => {
   return (
@@ -85,6 +86,13 @@ const BottomBarContainer = styled.div`
   padding-bottom: 1.5rem;
 
   p {
+    font-size: 1.9rem;
     margin-bottom: 0;
+  }
+
+  @media (max-width: ${BREAKPOINTS.tablet}) {
+    p {
+      font-size: 1.7rem;
+    }
   }
 `;

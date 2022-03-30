@@ -40,7 +40,7 @@ const StyledButton = styled.a`
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 0.7rem 1.8rem;
+  padding: var(--button-padding);
   border: 2px solid;
   border-radius: 3px;
   display: inline-block;

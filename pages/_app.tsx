@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     --document-max-width: 1408px;
     --document-padding: 4rem;
     --section-padding: 8rem;
+    --button-padding: 0.7rem 1.8rem;
     --column-width: 162px;
     --gutter-width: 16px;
     --breakpoint-mobile: ${BREAKPOINTS.mobile};
@@ -25,7 +26,8 @@ const GlobalStyles = createGlobalStyle`
 
     @media (max-width: ${BREAKPOINTS.tablet}) {
       --document-padding: 2rem;
-      --section-padding: 4rem;
+      --section-padding: 6rem;
+      --button-padding: 1rem 2rem;
   }
 `;
 

@@ -159,8 +159,8 @@ const Home: NextPage = () => {
             <h5>Optimized for Search</h5>
             <p>
               Your site comes standard with basic SEO to help you rank up on
-              Google. I also offer an <a href='#services'>SEO boost</a> when you
-              need to take it to the next level.
+              Google. I also offer an <a href='#seo-boost'>SEO boost</a> when
+              you need to take it to the next level.
             </p>
           </Blurb>
           <Blurb>
@@ -186,7 +186,8 @@ const Home: NextPage = () => {
             <h5>Easy to Update & Maintain</h5>
             <p>
               I make it easy for you to update and maintain (if you're the hands
-              on type). If you're not, I offer website care plans to keep you
+              on type). If you're not, I offer{' '}
+              <a href='#website-care-plans'>website care plans</a> to keep you
               covered.
             </p>
           </Blurb>

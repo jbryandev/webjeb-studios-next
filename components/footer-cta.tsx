@@ -38,6 +38,7 @@ const FooterContainer = styled.div`
   text-align: center;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  min-height: 500px;
 
   h2 {
     color: var(--color-text-headings-dark);
