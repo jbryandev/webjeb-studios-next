@@ -232,45 +232,42 @@ const Home: NextPage = () => {
           </Blurb>
         </FeatureBlurbs>
       </Section>
-      <Section
+      {/* <Section
         id='recent-work'
         customStyles={{ backgroundColor: 'var(--color-ltgray-background)' }}
       >
-        <div style={{ textAlign: 'center' }}>
-          <h2>Recent Work</h2>
-          <Divider />
-          <FeaturedProjects>
-            <FeaturedProject>
-              <Image
-                src={arculumLogo}
-                alt='Arculum Computers'
-                width={400}
-                height={400}
-              />
-              <h5>Arculum Computers</h5>
-            </FeaturedProject>
-            <FeaturedProject>
-              <Image
-                src={mbcLogo}
-                alt='Mark Bryan Construction'
-                width={400}
-                height={400}
-              />
-              <h5>Mark Bryan Construction</h5>
-            </FeaturedProject>
-          </FeaturedProjects>
-        </div>
-      </Section>
-      <Section
+        <SectionTitle>Case Studies</SectionTitle>
+        <h2>Some recent success stories!</h2>
+        <FeaturedProjects>
+          <FeaturedProject>
+            <Image
+              src={arculumLogo}
+              alt='Arculum Computers'
+              width={300}
+              height={300}
+            />
+            <h5>Arculum Computers</h5>
+          </FeaturedProject>
+          <FeaturedProject>
+            <Image
+              src={mbcLogo}
+              alt='Mark Bryan Construction'
+              width={300}
+              height={300}
+            />
+            <h5>Mark Bryan Construction</h5>
+          </FeaturedProject>
+        </FeaturedProjects>
+      </Section> */}
+      {/* <Section
         id='testimonials'
         customStyles={{ backgroundColor: 'var(--color-mdgray-background)' }}
       >
-        <div style={{ textAlign: 'center' }}>
-          <h2>What my clients say</h2>
-          <Divider />
-          <p>COMING SOON!</p>
-        </div>
-      </Section>
+        <SectionTitle>Testimonials</SectionTitle>
+        <h2>Feedback from my clients</h2>
+        <Divider />
+        <p>COMING SOON!</p>
+      </Section> */}
       <Section
         id='founders-note'
         customStyles={{ backgroundColor: 'var(--color-dark-background)' }}
@@ -390,7 +387,7 @@ const Divider = styled.div`
 
 const FeaturedProjects = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
   gap: var(--document-padding);
 `;
