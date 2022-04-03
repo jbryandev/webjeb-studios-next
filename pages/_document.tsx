@@ -1,6 +1,5 @@
 import Document, {
   DocumentContext,
-  DocumentInitialProps,
   Html,
   Head,
   Main,
