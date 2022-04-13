@@ -14,6 +14,11 @@ const MainMenu = () => {
         </Link>
       </li>
       <li>
+        <Link href='#features'>
+          <a>Features</a>
+        </Link>
+      </li>
+      <li>
         <Link href='#work'>
           <a>Work</a>
         </Link>

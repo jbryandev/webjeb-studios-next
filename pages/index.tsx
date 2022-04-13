@@ -232,12 +232,15 @@ const Home: NextPage = () => {
           </Blurb>
         </FeatureBlurbs>
       </Section>
-      {/* <Section
-        id='recent-work'
-        customStyles={{ backgroundColor: 'var(--color-ltgray-background)' }}
+      <Section
+        id='work'
+        customStyles={{
+          backgroundColor: 'var(--color-ltgray-background)',
+          textAlign: 'center',
+        }}
       >
-        <SectionTitle>Case Studies</SectionTitle>
-        <h2>Some recent success stories!</h2>
+        <h2>Recent Work</h2>
+        <Divider />
         <FeaturedProjects>
           <FeaturedProject>
             <Image
@@ -258,18 +261,20 @@ const Home: NextPage = () => {
             <h5>Mark Bryan Construction</h5>
           </FeaturedProject>
         </FeaturedProjects>
-      </Section> */}
-      {/* <Section
+      </Section>
+      <Section
         id='testimonials'
-        customStyles={{ backgroundColor: 'var(--color-mdgray-background)' }}
+        customStyles={{
+          backgroundColor: 'var(--color-mdgray-background)',
+          textAlign: 'center',
+        }}
       >
-        <SectionTitle>Testimonials</SectionTitle>
-        <h2>Feedback from my clients</h2>
+        <h2>What my clients say</h2>
         <Divider />
         <p>COMING SOON!</p>
-      </Section> */}
+      </Section>
       <Section
-        id='founders-note'
+        id='about'
         customStyles={{ backgroundColor: 'var(--color-dark-background)' }}
       >
         <FoundersNote>
@@ -387,7 +392,7 @@ const Divider = styled.div`
 
 const FeaturedProjects = styled.div`
   display: flex;
-  justify-content: left;
+  justify-content: center;
   flex-wrap: wrap;
   gap: var(--document-padding);
 `;
