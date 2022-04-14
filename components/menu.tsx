@@ -9,22 +9,22 @@ const MainMenu = () => {
         </Link>
       </li>
       <li>
-        <Link href='#services'>
+        <Link href='/#services'>
           <a>Services</a>
         </Link>
       </li>
       <li>
-        <Link href='#work'>
+        <Link href='/#work'>
           <a>Work</a>
         </Link>
       </li>
       <li>
-        <Link href='#testimonials'>
+        <Link href='/#testimonials'>
           <a>Testimonials</a>
         </Link>
       </li>
       <li>
-        <Link href='#about'>
+        <Link href='/#about'>
           <a>About</a>
         </Link>
       </li>
