@@ -12,16 +12,16 @@ async function sendEmail(req, res) {
       <html lang="en">
       <head>
         <meta charset="utf-8">
-        <title>The HTML5 Herald</title>
-        <meta name="description" content="The HTML5 Herald">
-        <meta name="author" content="SitePoint">
+        <title>Webjeb Studios | New Lead</title>
         <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
       </head>
       <body>
-        <img src="https://webjeb-studios-next.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwebjeb-studios-logo.a1928739.png&w=256&q=75" alt="Webjeb Studios Logo" style="width: 100%; max-width: 256px;">
+        <img src="https://webjeb-studios-next.vercel.app/images/webjeb-studios-logo.png" alt="Webjeb Studios Logo">
         <h1>New Lead</h1>
         <p>
-          <strong>Name:</strong> ${req.body.firstName} ${req.body.lastName}<br />
+          <strong>Name:</strong> ${req.body.firstName} ${
+        req.body.lastName
+      }<br />
           <strong>Email:</strong> ${req.body.email}<br />
           <strong>Phone:</strong> ${req.body.phone}<br />
           <strong>Company:</strong> ${req.body.company}<br />
@@ -29,7 +29,12 @@ async function sendEmail(req, res) {
           <strong>Interest:</strong> ${req.body.interestedIn}<br />
           <strong>Intent:</strong> ${req.body.intent}<br />
           <strong>Lead Source:</strong> ${req.body.leadSource}<br />
-          <strong>Additional Information:</strong> ${req.body.additionalInfo}<br />
+          <strong>Additional Information:</strong> ${
+            req.body.additionalInfo
+          }<br />
+          <strong>Date Created:</strong> ${new Date(
+            req.body.createdAt
+          ).toLocaleString('en-us', { timeZone: 'CST' })}<br />
         </p>
       </body>
       </html>`,

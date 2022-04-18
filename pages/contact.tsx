@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import BREAKPOINTS from '../constants';
 import { useRouter } from 'next/router';
 import Button from '../components/button';
+import Script from 'next/script';
 
 // types used for validation
 type FormData = {
@@ -63,9 +64,16 @@ function Contact() {
     useForm<FormData>(formOptions);
   const { errors } = formState;
 
+  // reCAPTCHA public site key
+  const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
+
   // handle form submission
   function onSubmit(data: FormData) {
-    return createLead(data);
+    grecaptcha.ready(() => {
+      grecaptcha.execute(SITE_KEY, { action: 'submit' }).then(async (token) => {
+        return createLead(data);
+      });
+    });
   }
 
   // create a new lead from form data and return json response
@@ -283,6 +291,8 @@ function Contact() {
         <StyledButton type='submit' disabled={formState.isSubmitting}>
           Submit
         </StyledButton>
+        {/* reCAPTCHA script */}
+        <Script src='https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key'></Script>
       </ContactForm>
     </>
   );
