@@ -65,7 +65,7 @@ function Contact() {
 
   // handle form submission
   function onSubmit(data: FormData) {
-    return createLead(data);
+    // return createLead(data);
   }
 
   // create a new lead from form data and return json response
@@ -280,9 +280,9 @@ function Contact() {
           <label>Questions or additional information</label>
           <textarea {...register('additionalInfo')} rows={5} />
         </InputGroupSpan8>
-        <StyledButton type='submit' disabled={formState.isSubmitting}>
+        {/* <StyledButton type='submit' disabled={formState.isSubmitting}>
           Submit
-        </StyledButton>
+        </StyledButton> */}
       </ContactForm>
     </>
   );
