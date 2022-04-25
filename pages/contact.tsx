@@ -74,6 +74,7 @@ function Contact() {
 
   // handle form submission
   function onSubmit(data: FormData) {
+<<<<<<< HEAD
     if (data.challenge === 5) {
       // Challenge correct, this is a real user
       createLead(data);
@@ -81,6 +82,9 @@ function Contact() {
       // Challenge incorrect, this is a bot, redirect to home
       router.push('/');
     }
+=======
+    // return createLead(data);
+>>>>>>> 9a1f230ffb54fb3300393afa646dc2e85e2143cf
   }
 
   // create a new lead from form data and return json response
@@ -296,6 +300,7 @@ function Contact() {
           <label>Questions or additional information</label>
           <textarea {...register('additionalInfo')} rows={5} />
         </InputGroupSpan8>
+<<<<<<< HEAD
         <ChallengeQ>
           <label>2 + 3 = ?*</label>
           <input {...register('challenge')} maxLength='3' />
@@ -306,6 +311,11 @@ function Contact() {
         </StyledButton>
         {/* reCAPTCHA script */}
         <Script src='https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key'></Script>
+=======
+        {/* <StyledButton type='submit' disabled={formState.isSubmitting}>
+          Submit
+        </StyledButton> */}
+>>>>>>> 9a1f230ffb54fb3300393afa646dc2e85e2143cf
       </ContactForm>
     </>
   );
