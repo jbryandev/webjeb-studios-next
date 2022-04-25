@@ -74,7 +74,6 @@ function Contact() {
 
   // handle form submission
   function onSubmit(data: FormData) {
-<<<<<<< HEAD
     if (data.challenge === 5) {
       // Challenge correct, this is a real user
       createLead(data);
@@ -82,9 +81,6 @@ function Contact() {
       // Challenge incorrect, this is a bot, redirect to home
       router.push('/');
     }
-=======
-    // return createLead(data);
->>>>>>> 9a1f230ffb54fb3300393afa646dc2e85e2143cf
   }
 
   // create a new lead from form data and return json response
