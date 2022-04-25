@@ -107,7 +107,7 @@ function Contact() {
     const email = await fetch('/api/sendgrid', requestOptions);
     const emailResponse = await email.json();
 
-    // return await fetch('/api/createLead', requestOptions).then(handleResponse);
+    return await fetch('/api/createLead', requestOptions).then(handleResponse);
   }
 
   // handle the response from the server and redirect to confirmation screen
@@ -296,10 +296,9 @@ function Contact() {
           <label>Questions or additional information</label>
           <textarea {...register('additionalInfo')} rows={5} />
         </InputGroupSpan8>
-<<<<<<< HEAD
         <ChallengeQ>
           <label>2 + 3 = ?*</label>
-          <input {...register('challenge')} maxLength='3' />
+          <input {...register('challenge')} maxLength={3} />
           <p className='error'>{errors.challenge?.message}</p>
         </ChallengeQ>
         <StyledButton type='submit' disabled={formState.isSubmitting}>
@@ -307,11 +306,6 @@ function Contact() {
         </StyledButton>
         {/* reCAPTCHA script */}
         <Script src='https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key'></Script>
-=======
-        {/* <StyledButton type='submit' disabled={formState.isSubmitting}>
-          Submit
-        </StyledButton> */}
->>>>>>> 9a1f230ffb54fb3300393afa646dc2e85e2143cf
       </ContactForm>
     </>
   );
