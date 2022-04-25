@@ -2,12 +2,13 @@ import sendgrid from '@sendgrid/mail';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
-async function sendEmail(req, res) {
+export default async function handler(req, res) {
+  const body = JSON.parse(req.body);
   try {
     await sendgrid.send({
       to: 'james@webjebstudios.com',
       from: 'leads@webjebstudios.com',
-      subject: `[ New Lead ] - ${req.body.company}`,
+      subject: `[ New Lead ] - ${body.company}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
       <head>
@@ -19,31 +20,25 @@ async function sendEmail(req, res) {
         <img src="https://webjeb-studios-next.vercel.app/images/webjeb-studios-logo.png" alt="Webjeb Studios Logo">
         <h1>New Lead</h1>
         <p>
-          <strong>Name:</strong> ${req.body.firstName} ${
-        req.body.lastName
-      }<br />
-          <strong>Email:</strong> ${req.body.email}<br />
-          <strong>Phone:</strong> ${req.body.phone}<br />
-          <strong>Company:</strong> ${req.body.company}<br />
-          <strong>Website:</strong> ${req.body.website}<br />
-          <strong>Interest:</strong> ${req.body.interestedIn}<br />
-          <strong>Intent:</strong> ${req.body.intent}<br />
-          <strong>Lead Source:</strong> ${req.body.leadSource}<br />
-          <strong>Additional Information:</strong> ${
-            req.body.additionalInfo
-          }<br />
+          <strong>Name:</strong> ${body.firstName} ${body.lastName}<br />
+          <strong>Email:</strong> ${body.email}<br />
+          <strong>Phone:</strong> ${body.phone}<br />
+          <strong>Company:</strong> ${body.company}<br />
+          <strong>Website:</strong> ${body.website}<br />
+          <strong>Interest:</strong> ${body.interestedIn}<br />
+          <strong>Intent:</strong> ${body.intent}<br />
+          <strong>Lead Source:</strong> ${body.leadSource}<br />
+          <strong>Additional Information:</strong> ${body.additionalInfo}<br />
           <strong>Date Created:</strong> ${new Date(
-            req.body.createdAt
+            body.createdAt
           ).toLocaleString('en-us', { timeZone: 'CST' })}<br />
         </p>
       </body>
       </html>`,
     });
   } catch (error) {
-    console.error(error);
+    console.error(error.message);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
   return res.status(200).json({ message: 'Email sent' });
 }
-
-export default sendEmail;

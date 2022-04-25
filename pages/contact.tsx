@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import Section from '../components/section';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { object, string, array } from 'yup';
+import { object, string, array, number } from 'yup';
 import styled from 'styled-components';
 import BREAKPOINTS from '../constants';
 import { useRouter } from 'next/router';
@@ -21,6 +21,7 @@ type FormData = {
   intent: string;
   leadSource: string;
   additionalInfo: string;
+  challenge: number;
 };
 
 function Contact() {
@@ -50,6 +51,10 @@ function Contact() {
     intent: string().nullable().required('Please select an option'),
     leadSource: string().nullable().required('Please select an option'),
     additionalInfo: string(),
+    challenge: number()
+      .positive('Must be a positive number')
+      .required('Please provide an answer')
+      .typeError('Please enter a valid number'),
   }).required();
   const formOptions = { resolver: yupResolver(validationSchema) };
 
@@ -69,11 +74,13 @@ function Contact() {
 
   // handle form submission
   function onSubmit(data: FormData) {
-    grecaptcha.ready(() => {
-      grecaptcha.execute(SITE_KEY, { action: 'submit' }).then(async (token) => {
-        return createLead(data);
-      });
-    });
+    if (data.challenge === 5) {
+      // Challenge correct, this is a real user
+      createLead(data);
+    } else {
+      // Challenge incorrect, this is a bot, redirect to home
+      router.push('/');
+    }
   }
 
   // create a new lead from form data and return json response
@@ -98,8 +105,9 @@ function Contact() {
 
     // send new lead email
     const email = await fetch('/api/sendgrid', requestOptions);
+    const emailResponse = await email.json();
 
-    return await fetch('/api/createLead', requestOptions).then(handleResponse);
+    // return await fetch('/api/createLead', requestOptions).then(handleResponse);
   }
 
   // handle the response from the server and redirect to confirmation screen
@@ -108,7 +116,7 @@ function Contact() {
     if (result.success) {
       router.push('/contact?success=true');
     } else {
-      console.log(result.error);
+      console.log(result.message);
       return result.message;
     }
   }
@@ -288,6 +296,11 @@ function Contact() {
           <label>Questions or additional information</label>
           <textarea {...register('additionalInfo')} rows={5} />
         </InputGroupSpan8>
+        <ChallengeQ>
+          <label>2 + 3 = ?*</label>
+          <input {...register('challenge')} maxLength='3' />
+          <p className='error'>{errors.challenge?.message}</p>
+        </ChallengeQ>
         <StyledButton type='submit' disabled={formState.isSubmitting}>
           Submit
         </StyledButton>
@@ -364,6 +377,7 @@ const StyledInputGroup = styled.div`
     border-width: 1px;
   }
 `;
+
 const InputGroupSpan4 = styled(StyledInputGroup)`
   grid-column: span 4;
 `;
@@ -373,6 +387,17 @@ const InputGroupSpan8 = styled(StyledInputGroup)`
 
   @media (max-width: ${BREAKPOINTS.mobile}) {
     grid-column: span 4;
+  }
+`;
+
+const ChallengeQ = styled(InputGroupSpan8)`
+  label,
+  input {
+    width: auto;
+  }
+
+  label {
+    margin-right: 1rem;
   }
 `;
 

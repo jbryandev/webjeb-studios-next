@@ -2,14 +2,14 @@ import connectToDatabase from '../../lib/mongodb';
 
 export default async function handler(req, res) {
   const SECRET_KEY = process.env.RECAPTCHA_SECRETKEY;
-  const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${req.body.recaptchaResponse}`;
+  // const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${req.body.recaptchaResponse}`;
 
   if (req.method === 'POST') {
     try {
       // connect to the database
       let { db } = await connectToDatabase();
       // add the post
-      await db.collection('leads').insertOne(req.body);
+      await db.collection('leads').insertOne(JSON.parse(req.body));
       // return a message
       return res.json({
         message: 'Lead added successfully',
