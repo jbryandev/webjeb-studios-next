@@ -31,7 +31,7 @@ export default async function handler(req, res) {
           <strong>Additional Information:</strong> ${body.additionalInfo}<br />
           <strong>Date Created:</strong> ${new Date(
             body.createdAt
-          ).toLocaleString('en-us', { timeZone: 'CST' })}<br />
+          ).toLocaleString('en-us', { timeZone: 'America/Chicago' })}<br />
         </p>
       </body>
       </html>`,

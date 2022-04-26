@@ -70,7 +70,7 @@ function Contact() {
   const { errors } = formState;
 
   // reCAPTCHA public site key
-  const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
+  // const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
 
   // handle form submission
   function onSubmit(data: FormData) {
@@ -104,8 +104,8 @@ function Contact() {
     };
 
     // send new lead email
-    const email = await fetch('/api/sendgrid', requestOptions);
-    const emailResponse = await email.json();
+    await fetch('/api/sendgrid', requestOptions);
+    // const emailResponse = await email.json();
 
     return await fetch('/api/createLead', requestOptions).then(handleResponse);
   }
