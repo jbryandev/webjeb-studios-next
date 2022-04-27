@@ -59,7 +59,7 @@ export default Legal;
 
 const Termageddon = styled.div`
   font-size: 2rem;
-  width: 70ch;
+  max-width: 70ch;
   ul,
   ol {
     margin-bottom: 2.6rem;
