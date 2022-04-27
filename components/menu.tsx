@@ -36,12 +36,12 @@ const LegalMenu = () => {
   return (
     <ul>
       <li>
-        <Link href='/privacy-policy'>
+        <Link href='/privacy'>
           <a>Privacy Policy</a>
         </Link>
       </li>
       <li>
-        <Link href='/terms-and-conditions'>
+        <Link href='/terms'>
           <a>Terms & Conditions</a>
         </Link>
       </li>
