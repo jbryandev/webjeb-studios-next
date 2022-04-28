@@ -26,7 +26,7 @@ import founderImage from '../public/images/james-bryan-founder.png';
 
 const Home: NextPage = () => {
   return (
-    <Layout title='Webjeb Studios - Next Version!'>
+    <Layout title='Webjeb Studios | Web Design, Maintenance, and SEO'>
       <Section id='hero'>
         <HeroContainer>
           <div>
