@@ -105,8 +105,8 @@ function Contact() {
 
     // send new lead email
     await fetch('/api/sendgrid', requestOptions);
-    // const emailResponse = await email.json();
 
+    // create lead
     return await fetch('/api/createLead', requestOptions).then(handleResponse);
   }
 
@@ -114,8 +114,10 @@ function Contact() {
   async function handleResponse(response: Response) {
     let result = await response.json();
     if (result.success) {
+      // redirect to confirmation screen
       router.push('/contact?success=true');
     } else {
+      // redirect to error screen
       console.log(result.message);
       return result.message;
     }
