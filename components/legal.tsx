@@ -8,11 +8,13 @@ type Props = {
   policyKey?: string;
 };
 
+const termageddonAPIPath = 'https://app.termageddon.com/api/policy/';
+
 const Legal = ({ title, policyKey }: Props) => {
   useEffect(() => {
     const policy = document.getElementById('policy');
-    if (policy === null) {
-      console.log('Error!');
+    if (policy === null || policyKey === undefined) {
+      console.log('Error! Could not find policy element or policy key.');
     } else {
       const pol_key = policyKey;
       const pol_extra = policy.dataset.extra ? '?' + policy.dataset.extra : '';
@@ -23,14 +25,11 @@ const Legal = ({ title, policyKey }: Props) => {
       };
 
       xhr.onerror = function () {
-        console.log('Error!');
+        console.log('Error! Could not load policy.');
         policy.innerHTML = 'There has been an error loading this policy!';
       };
 
-      xhr.open(
-        'GET',
-        'https://app.termageddon.com/api/policy/' + pol_key + pol_extra
-      );
+      xhr.open('GET', termageddonAPIPath + pol_key + pol_extra);
       xhr.send();
     }
   });
