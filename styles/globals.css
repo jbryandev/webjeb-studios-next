@@ -1,3 +1,4 @@
+import 
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -18,16 +19,11 @@ body {
 html {
   font-size: 62.5%;
 }
-@media (max-width: 1000px) {
-  html {
-    font-size: 50%;
-  }
-}
 
 body {
   font-family: 'Archivo', sans-serif;
   font-weight: 500;
-  line-height: 2.6rem;
+  line-height: 2.7rem;
   color: var(--color-text-body);
   -webkit-font-smoothing: antialiased;
 }
@@ -65,29 +61,24 @@ h6 {
 }
 h1 {
   font-size: 5.5rem;
-  line-height: 5.5rem;
+  line-height: 5.7rem;
 }
 h2 {
   font-size: 4.5rem;
-  line-height: 4.5rem;
+  line-height: 4.9rem;
 }
 h3 {
-  font-size: 3rem;
-  line-height: 3rem;
+  font-size: 3.5rem;
+  line-height: 3.8rem;
 }
 h4 {
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-}
-h5 {
-  font-size: 2.3rem;
-  line-height: 2.3rem;
+  font-size: 2.8rem;
+  line-height: 3.1rem;
 }
 p,
 a {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
-
 input,
 textarea,
 button,
@@ -99,13 +90,52 @@ fieldset {
   font-size: 1.8rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
   h1 {
-    font-size: 4.5rem;
-    line-height: 4.5rem;
+    font-size: 3.1rem;
+    line-height: 3.4rem;
   }
   h2 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  p,
+  a {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  input,
+  textarea,
+  button,
+  textarea,
+  select,
+  label,
+  fieldset {
+    font: inherit;
+    font-size: 1.6rem;
+  }
+}
+
+.emphasis {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  color: var(--color-text-headings);
+}
+
+@media (max-width: 750px) {
+  .emphasis {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
   }
 }

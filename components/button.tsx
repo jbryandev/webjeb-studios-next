@@ -39,10 +39,8 @@ const StyledButton = styled.a`
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 2px;
   padding: var(--button-padding);
   border: 2px solid;
-  border-radius: 3px;
   display: inline-block;
 `;
 

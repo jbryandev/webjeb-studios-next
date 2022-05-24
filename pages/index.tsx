@@ -7,11 +7,6 @@ import Section from '../components/section';
 import SectionTitle from '../components/section-title';
 import Blurb from '../components/blurb';
 import FooterCTA from '../components/footer-cta';
-import BREAKPOINTS from '../constants';
-import heroImg from '../public/images/hero-img.png';
-import webDesignIcon from '../public/images/web-design-icon.png';
-import carePlansIcon from '../public/images/care-plans-icon.png';
-import seoBoostIcon from '../public/images/seo-boost-icon.png';
 import mobileFriendlyIcon from '../public/images/mobile-friendly-icon.png';
 import conversionIcon from '../public/images/conversion-icon.png';
 import seoIcon from '../public/images/seo-icon.png';
@@ -23,102 +18,119 @@ import empoweredIcon from '../public/images/empowered-icon.png';
 import arculumLogo from '../public/images/arculum-logo.jpeg';
 import mbcLogo from '../public/images/mark-bryan-construction.jpeg';
 import founderImage from '../public/images/james-bryan-founder.png';
+import BREAKPOINTS from '../constants';
 
 const Home: NextPage = () => {
   return (
-    <Layout title='Webjeb Studios | Web Design, Maintenance, and SEO'>
-      <Section id='hero'>
-        <HeroContainer>
-          <div>
-            <SectionTitle>Hi, I'm James</SectionTitle>
-            <h1>I build amazing websites crafted to grow your business</h1>
-            <p>
-              I help small to medium sized businesses build, maintain, and grow
-              their online presence through strategy-led web design,
-              maintenance, and SEO. With me, you get a dedicated web designer in
-              your corner from day one to launch and beyond.
-            </p>
-            <Button
-              href='/contact'
-              variant='primary'
-              styles={{ marginRight: '2rem', marginBottom: '2rem' }}
-            >
-              Get started
-            </Button>
-            <Button href='#services' variant='secondary'>
-              Learn More
-            </Button>
-          </div>
-          <div>
-            <Image
-              src={heroImg}
-              alt='James Bryan, founder of Webjeb Studios'
-              placeholder='blur'
-            />
-          </div>
-        </HeroContainer>
-      </Section>
+    <Layout title='Webjeb Studios | We Make Jamstack Websites'>
       <Section
-        id='services'
+        id='hero'
         customStyles={{
-          backgroundImage:
-            'linear-gradient(0deg, rgba(32, 47, 56, 0.86) 0%, var(--color-dark-background) 100%), url(/images/web-services-bg.jpg)',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
+          backgroundColor: 'var(--color-ltgray-background)',
         }}
       >
-        <SectionTitle>Core Services</SectionTitle>
-        <h2 style={{ color: 'var(--color-text-headings-dark)' }}>
-          Everything you need to grow online
-        </h2>
-        <ServiceBlurbs>
-          <Blurb id='web-design' colorMode='dark'>
-            <Image
-              src={webDesignIcon}
-              alt='Website Design'
-              width='100%'
-              height='100%'
-            />
-            <h5>Website Design</h5>
+        <HeroContainer>
+          <div>
+            <h1>Harness the power of the modern web</h1>
             <p>
-              Modern, responsive websites that convert and are designed for
-              growth. I can redesign your current site or build something new
-              from the ground up.
+              Leverage the latest in web tech to build a faster, more secure
+              website that drives your business forward.
             </p>
-          </Blurb>
-          <Blurb id='website-care-plans' colorMode='dark'>
-            <Image
-              src={carePlansIcon}
-              alt='Website Care Plans'
-              width='100%'
-              height='100%'
-            />
-            <h5>Website Care Plans</h5>
-            <p>
-              Keep your site maintained, secure, backed up, and performing at
-              its very best with a website care plan that includes monthly
-              reporting on traffic and page views.
-            </p>
-          </Blurb>
-          <Blurb id='seo-boost' colorMode='dark'>
-            <Image
-              src={seoBoostIcon}
-              alt='SEO Boost'
-              width='100%'
-              height='100%'
-            />
-            <h5>SEO Boost</h5>
-            <p>
-              Optimize your site for search so that your audience finds you
-              first. Get the <em>right</em> traffic to your website (folks ready
-              to buy from you), not just more traffic.
-            </p>
-          </Blurb>
-        </ServiceBlurbs>
-        <Button href='/contact' variant='primary'>
-          Get started
-        </Button>
+            <Button
+              href='#discover-part1'
+              variant='secondary'
+              styles={{ marginRight: '2rem', marginBottom: '2rem' }}
+            >
+              Discover how
+            </Button>
+            <Button href='/contact' variant='primary'>
+              Work with us
+            </Button>
+          </div>
+          <div></div>
+        </HeroContainer>
       </Section>
+      <Section id='benefits'>
+        <BenefitsSnippet>
+          <Blurb id='speed'>
+            <h3>Speed</h3>
+            <p>
+              We build the fastest websites on the web using pre-built pages
+              served statically over content delivery networks (CDN)
+              geographically closest to your audience.
+            </p>
+          </Blurb>
+          <Blurb id='security'>
+            <h3>Security</h3>
+            <p>
+              We host your site as a collection of static assets located on a
+              CDN. Since server connections are removed from the equation,
+              you're less vulnerable to attacks.
+            </p>
+          </Blurb>
+          <Blurb id='scale'>
+            <h3>Scale</h3>
+            <p>
+              Scale your site with ease without the hefty price tag. Serving
+              static assets over CDN results in big gains over traditional
+              servers as your audience grows.
+            </p>
+          </Blurb>
+        </BenefitsSnippet>
+      </Section>
+      <Section id='discover-part1'>
+        <h2>Traditional web architecture is outdated</h2>
+        <p className='emphasis'>
+          In today's increasingly-crowded and rapidly-changing web, websites
+          need to be more flexible and nimble to stand out from the pack.
+        </p>
+        <p>
+          Content management systems (CMS) like Wordpress, Drupal, Wix, and
+          Squarespace have ruled the web since the early 2000's. They use a
+          traditional web architecture where content and display are managed
+          together. This makes them convenient but also limited. Plugins can
+          extended functionality, but this becomes complex, slow, and harder to
+          maintain at scale.
+        </p>
+      </Section>
+      <Section id='discover-part2'>
+        <h2>The future of the web is decoupled</h2>
+        <p className='emphasis'>
+          A new decoupled approach has emerged and it is changing the way we
+          think about and build websites.
+        </p>
+        <p>
+          In a decoupled system, the content is separate from the display. This
+          allows you to choose the "best in breed" solution for each component
+          of your website. This is akin to having a hand-picked team of
+          specialists working in concert together, each performing their own
+          task with the highest degree of competancy. Because decoupled websites
+          are highly optimized, the costs to maintain, secure, and scale are
+          lower than traditional CMS solutions.
+        </p>
+      </Section>
+      <Section id='discover-part3'>
+        <h2>The Jamstack revolution</h2>
+        <p>
+          The name given to this decoupled approach is the Jamstack. Jamstack
+          stands for Javascript, APIs, and Markup. These three terms represent
+          the major components of a Jamstack website. Javascript handles the
+          dynamic functionality, APIs provide access to the CMS and business
+          logic, and Markup represents the user interface which is compiled at
+          build time and served statically via CDN.
+        </p>
+        <h3>The benefits of Jamstack</h3>
+        <p>
+          The benefits of Jamstack are undeniably impressive: better
+          performance, lock-tight security, unlimited flexibility and
+          scalability, portability, and maintainability. Not only that, but a
+          traditional CMS like Wordpress (or any CMS) can still be part of the
+          solution. The Jamstack approach isn’t right for every situation, but
+          if your needs extend beyond a simple blog or landing page style site,
+          then Jamstack could be a game-changer for you.
+        </p>
+      </Section>
+
       <Section id='features'>
         <SectionTitle>What you can expect</SectionTitle>
         <h2>All the features to make you stand out</h2>
@@ -339,9 +351,7 @@ const HeroContainer = styled.div`
   }
 `;
 
-const ServiceBlurbs = styled.div`
-  padding-top: var(--document-padding);
-  padding-bottom: var(--document-padding);
+const BenefitsSnippet = styled.div`
   display: grid;
   grid-template-columns: repeat(
     auto-fill,

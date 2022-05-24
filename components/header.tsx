@@ -21,7 +21,7 @@ const Header = () => {
             <MainMenu />
           </MenuWrapper>
           <Button href='/contact' variant='primary'>
-            Get started
+            Work with us
           </Button>
         </MenuContainer>
       </HeaderContainer>
@@ -60,12 +60,12 @@ const MenuContainer = styled.div`
 const MenuWrapper = styled.div`
   li {
     display: inline;
-    margin-right: 2.4rem;
+    margin-right: 2.8rem;
   }
   a {
     text-decoration: none;
     color: var(--color-text-headings);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.8em;
     transition: opacity 0.4s ease-in-out;
 

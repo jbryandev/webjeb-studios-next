@@ -21,35 +21,11 @@ const StyledBlurb = styled.div<Props>`
   display: block;
   width: 100%;
   max-width: 65ch;
-
-  h5 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-
-  p {
-    font-size: 2em;
-  }
-
-  a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--color-primary);
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    img {
-      max-width: 40%;
-    }
-  }
-
   ${(props) => props.colorMode === 'dark' && darkModeMixin}
 `;
 
 const darkModeMixin = css`
-  h5 {
+  h3 {
     color: var(--color-text-headings-dark);
   }
   p {
