@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
     --breakpoint-tablet: ${BREAKPOINTS.tablet};
 
     @media (max-width: ${BREAKPOINTS.tablet}) {
-      --document-padding: 2rem;
+      --document-padding: 3rem;
       --section-padding: 6rem;
       --button-padding: 1rem 2rem;
   }
