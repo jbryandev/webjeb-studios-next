@@ -17,7 +17,8 @@ const GlobalStyles = createGlobalStyle`
     --color-mdgray-background: #C5D2D6;
     --document-max-width:1280px;
     --document-padding: 4rem;
-    --section-padding: 8rem;
+    --document-margin: 6rem;
+    --section-padding: 12rem;
     --button-padding: 0.9rem 2.9rem;
     --column-width: 162px;
     --gutter-width: 16px;
@@ -25,9 +26,13 @@ const GlobalStyles = createGlobalStyle`
     --breakpoint-tablet: ${BREAKPOINTS.tablet};
 
     @media (max-width: ${BREAKPOINTS.tablet}) {
-      --document-padding: 3rem;
+      --document-padding: 2rem;
+      --section-padding: 8rem;
+      --button-padding: 0.8rem 2rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
       --section-padding: 6rem;
-      --button-padding: 1rem 2rem;
   }
 `;
 

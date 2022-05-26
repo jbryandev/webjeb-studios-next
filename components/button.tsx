@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import BREAKPOINTS from '../constants';
 
 type Props = {
   children?: ReactNode;
@@ -35,13 +36,17 @@ export default Button;
 
 const StyledButton = styled.a`
   text-decoration: none;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
   padding: var(--button-padding);
   border: 2px solid;
   display: inline-block;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    font-size: 1.6rem;
+  }
 `;
 
 const PrimaryButton = styled(StyledButton)`

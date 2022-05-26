@@ -12,8 +12,13 @@ const Header = () => {
     <Section id='header' customStyles={HeaderCustomStyles}>
       <HeaderContainer>
         <Link href={'/'}>
-          <a>
-            <Image src={logo} alt='Webjeb Studios Logo' placeholder='blur' />
+          <a className='logo'>
+            <Image
+              src={logo}
+              alt='Webjeb Studios Logo'
+              placeholder='blur'
+              layout='responsive'
+            />
           </a>
         </Link>
         <MenuContainer>
@@ -45,6 +50,14 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  a.logo {
+    width: 169px;
+
+    @media (max-width: ${BREAKPOINTS.mobile}) {
+      width: 110px;
+    }
+  }
 `;
 
 const MenuContainer = styled.div`
@@ -60,7 +73,7 @@ const MenuContainer = styled.div`
 const MenuWrapper = styled.div`
   li {
     display: inline;
-    margin-right: 2.8rem;
+    margin-right: 4.25rem;
   }
   a {
     text-decoration: none;
