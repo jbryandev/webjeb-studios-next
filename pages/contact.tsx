@@ -328,15 +328,10 @@ function Contact() {
 
   return (
     <Layout title='Webjeb Studios | Get Started'>
-      <Section
-        id='heading'
-        customStyles={{
-          backgroundColor: 'var(--color-dark-background)',
-        }}
-      >
-        <h1 style={{ color: 'var(--color-text-headings-dark)' }}>
+      <Section id='heading' customStyles={GrayBackground}>
+        <h1>
           {/* Change heading depending on form submission status */}
-          {formVisible ? 'Get Started' : 'Thank you!'}
+          {formVisible ? 'Contact Us' : 'Thank you!'}
         </h1>
       </Section>
       <Section id='contact-form'>
@@ -348,6 +343,10 @@ function Contact() {
 }
 
 export default Contact;
+
+const GrayBackground = {
+  backgroundColor: 'var(--color-ltgray-background)',
+};
 
 const FormDescription = styled.p`
   max-width: 70ch;

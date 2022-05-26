@@ -1,9 +1,14 @@
-import MainMenu, { LegalMenu } from './menu';
+import MainMenu, {
+  ServicesMenu,
+  PackagesMenu,
+  ProcessMenu,
+  LegalMenu,
+} from './menu';
 import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import Section from './section';
-import logo from '../public/images/webjeb-studios-logo-wt.png';
+import logo from '../public/images/webjeb-studios-logo.png';
 import BREAKPOINTS from '../constants.js';
 
 const Footer = () => {
@@ -11,30 +16,48 @@ const Footer = () => {
     <Section
       id='footer'
       customStyles={{
-        backgroundColor: 'var(--color-dark-background)',
+        backgroundColor: 'var(--color-ltgray-background)',
         paddingBottom: 0,
       }}
     >
       <FooterContainer>
-        <Link href={'/'}>
-          <a>
-            <Image src={logo} alt='Webjeb Studios Logo' placeholder='blur' />
-          </a>
-        </Link>
-        <MenuWrapper>
-          <h4>Menu</h4>
+        <div className='about'>
+          <Link href={'/'}>
+            <a>
+              <Image src={logo} alt='Webjeb Studios Logo' placeholder='blur' />
+            </a>
+          </Link>
+          <p>
+            We're Jamstack experts based in Edmond, Oklahoma, where the wind
+            comes sweeping down the plain.
+          </p>
+          <Link href='/contact'>Contact us</Link>
+        </div>
+        <div className='menu'>
+          <p className='menu-title'>Navigation</p>
           <MainMenu />
-        </MenuWrapper>
-        <MenuWrapper>
-          <h4>Legal</h4>
-          <LegalMenu />
-        </MenuWrapper>
+        </div>
+        <div className='menu'>
+          <p className='menu-title'>Services</p>
+          <ServicesMenu />
+        </div>
+        <div className='menu'>
+          <p className='menu-title'>Packages</p>
+          <PackagesMenu />
+        </div>
+        <div className='menu'>
+          <p className='menu-title'>Process</p>
+          <ProcessMenu />
+        </div>
       </FooterContainer>
       <BottomBarContainer>
-        <p>
-          &copy; {new Date().getFullYear()} Webjeb Studios | Designed in Edmond,
-          OK
+        <p className='copyright'>
+          Copyright &copy; {new Date().getFullYear()} Webjeb Studios. All rights
+          reserved.
         </p>
+        <div className='menu'>
+          <LegalMenu />
+        </div>
       </BottomBarContainer>
     </Section>
   );
@@ -44,55 +67,115 @@ export default Footer;
 
 const FooterContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(
-      clamp(
-        100%/ (3 + 1) + 0.1%,
-        (var(--breakpoint-mobile) - 100vw) * 1000,
-        100%
-      ),
-      1fr
-    )
-  );
-  grid-gap: var(--document-padding);
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: var(--gutter-width);
   padding-bottom: var(--document-padding);
-`;
 
-const MenuWrapper = styled.div`
-  ul {
-    list-style: disc inside;
-    padding-left: 0;
-  }
-  li {
-    &::marker {
-      font-size: 2em;
-      color: var(--color-text-body-dark);
+  .about {
+    grid-column: 1 / span 3;
+
+    p {
+      margin-top: 3rem;
+      max-width: 306px;
+    }
+
+    a {
+      color: var(--color-text-body);
     }
   }
-  a {
-    margin-left: -0.5em;
-    text-decoration: none;
-    color: var(--color-text-body-dark);
+
+  .menu {
+    .menu-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-text-body);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
-  h4 {
-    color: var(--color-text-body);
-  margin-bottom: 0.5em;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    .about {
+      grid-column: 1 / -1;
+    }
+    .menu {
+      grid-column: span 4;
+    }
+  }
 `;
 
 const BottomBarContainer = styled.div`
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: var(--gutter-width);
   padding-bottom: 1.5rem;
 
-  p {
-    font-size: 1.9rem;
-    margin-bottom: 0;
+  .copyright {
+    grid-column: 1 / span 3;
+  }
+
+  .menu {
+    grid-column: 4 / span 4;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 1.5rem;
+
+      ::after {
+        content: '|';
+        margin-left: 1.5rem;
+      }
+
+      :last-child {
+        margin-right: 0;
+
+        ::after {
+          content: '';
+        }
+      }
+    }
+
+    a {
+      color: var(--color-text-body);
+    }
   }
 
   @media (max-width: ${BREAKPOINTS.tablet}) {
-    p {
-      font-size: 1.7rem;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    .copyright {
+      grid-column: 1 / -1;
+    }
+    .menu {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    .menu {
+      li {
+        display: block;
+        margin-right: 0;
+
+        ::after {
+          content: '';
+          margin-left: 0;
+        }
+      }
     }
   }
 `;

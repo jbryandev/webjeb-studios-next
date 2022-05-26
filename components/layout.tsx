@@ -13,7 +13,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <StyledLayout>
     <Head>
       <title>{title}</title>
-      <meta name='description' content='Jamstack websites!' />
+      <meta name='description' content='We make Jamstack websites' />
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <Header />

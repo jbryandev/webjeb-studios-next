@@ -5,20 +5,21 @@ import BREAKPOINTS from '../constants.js';
 
 const GlobalStyles = createGlobalStyle`
   html {
-    --color-text-body: #546972;
+    --color-text-body: #415056;
     --color-text-headings: #202f38;
     --color-text-body-dark: #C5D2D6;
-    --color-text-headings-dark: #fff;
+    --color-text-headings-dark: #FFF;
     --color-primary: #f26922;
-    --color-secondary: #546972;
-    --color-light-background: #fff;
+    --color-secondary: #415056;
+    --color-light-background: #FFF;
     --color-dark-background: #202f38;
-    --color-ltgray-background: RGBA(197,210,214,0.2);
+    --color-ltgray-background: #FFF6F6;
     --color-mdgray-background: #C5D2D6;
-    --document-max-width: 1408px;
+    --document-max-width:1280px;
     --document-padding: 4rem;
-    --section-padding: 8rem;
-    --button-padding: 0.7rem 1.8rem;
+    --document-margin: 6rem;
+    --section-padding: 12rem;
+    --button-padding: 0.9rem 2.9rem;
     --column-width: 162px;
     --gutter-width: 16px;
     --breakpoint-mobile: ${BREAKPOINTS.mobile};
@@ -26,8 +27,12 @@ const GlobalStyles = createGlobalStyle`
 
     @media (max-width: ${BREAKPOINTS.tablet}) {
       --document-padding: 2rem;
+      --section-padding: 8rem;
+      --button-padding: 0.8rem 2rem;
+  }
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
       --section-padding: 6rem;
-      --button-padding: 1rem 2rem;
   }
 `;
 
