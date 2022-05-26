@@ -61,18 +61,19 @@ const Home: NextPage = () => {
       <Section id='discover'>
         <DiscoverContainer>
           <div className='part1'>
-            <h2>Traditional web architecture is holding you back</h2>
+            <h2>Is outdated web architecture holding you back?</h2>
             <p className='emphasis'>
               In today's increasingly-crowded and rapidly-changing web, websites
               need to be more flexible and nimble to stand out from the pack.
             </p>
             <p className='body'>
-              Content management systems (CMS) like Wordpress, Drupal, Wix, and
-              Squarespace have ruled the web since the early 2000's. They use a
-              traditional web architecture where content and display are managed
-              together. This makes them convenient but also limited. Plugins can
-              extended functionality, but this becomes complex, slow, and harder
-              to maintain at scale.
+              Traditional content management systems (CMS) like Wordpress,
+              Drupal, Wix, and Squarespace have been around since the early
+              2000's. They use a web architecture where content and display are
+              managed together in a single application. This makes them
+              convenient but limited. Plugins can extend functionality, but this
+              adds complexity, reduces agility, introduces more security risk,
+              and increases maintainance overhead.
             </p>
           </div>
         </DiscoverContainer>
@@ -87,12 +88,12 @@ const Home: NextPage = () => {
             </p>
             <p className='body'>
               In a decoupled system, the content is separate from the display.
-              This allows you to choose the "best in breed" solution for each
+              This allows you to choose the “best in breed” solution for each
               component of your website. This is akin to having a hand-picked
               team of specialists working in concert together, each performing
               their own task with the highest degree of competancy. Because
               decoupled websites are highly optimized, the costs to maintain,
-              secure, and scale are lower than traditional CMS solutions.
+              secure, and scale are much lower than traditional CMS solutions.
             </p>
           </div>
         </DiscoverContainer>
