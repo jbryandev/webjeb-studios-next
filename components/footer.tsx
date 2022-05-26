@@ -81,6 +81,7 @@ const FooterContainer = styled.div`
 
     a {
       color: var(--color-text-body);
+      text-decoration: underline;
     }
   }
 
@@ -150,6 +151,7 @@ const BottomBarContainer = styled.div`
     }
 
     a {
+      text-decoration: underline;
       color: var(--color-text-body);
     }
   }

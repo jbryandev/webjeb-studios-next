@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
     --color-text-headings: #202f38;
     --color-text-body-dark: #C5D2D6;
     --color-text-headings-dark: #FFF;
+    --color-text-link: #f26922;
     --color-primary: #f26922;
     --color-secondary: #415056;
     --color-light-background: #FFF;
