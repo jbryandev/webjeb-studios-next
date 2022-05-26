@@ -331,7 +331,7 @@ function Contact() {
       <Section id='heading' customStyles={GrayBackground}>
         <h1>
           {/* Change heading depending on form submission status */}
-          {formVisible ? 'Contact' : 'Thank you!'}
+          {formVisible ? 'Contact Us' : 'Thank you!'}
         </h1>
       </Section>
       <Section id='contact-form'>
