@@ -23,8 +23,13 @@ const Footer = () => {
       <FooterContainer>
         <div className='about'>
           <Link href={'/'}>
-            <a>
-              <Image src={logo} alt='Webjeb Studios Logo' placeholder='blur' />
+            <a className='logo'>
+              <Image
+                src={logo}
+                alt='Webjeb Studios Logo'
+                placeholder='blur'
+                layout='responsive'
+              />
             </a>
           </Link>
           <p>
@@ -82,6 +87,14 @@ const FooterContainer = styled.div`
     a {
       color: var(--color-text-body);
       text-decoration: underline;
+    }
+
+    a.logo {
+      display: block;
+      width: 169px;
+      @media (max-width: ${BREAKPOINTS.mobile}) {
+        width: 110px;
+      }
     }
   }
 

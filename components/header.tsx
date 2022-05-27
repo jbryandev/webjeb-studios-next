@@ -53,7 +53,6 @@ const HeaderContainer = styled.div`
 
   a.logo {
     width: 169px;
-
     @media (max-width: ${BREAKPOINTS.mobile}) {
       width: 110px;
     }

@@ -35,9 +35,8 @@ const Home: NextPage = () => {
           <div className='blurb'>
             <h3>Speed</h3>
             <p>
-              We build the fastest websites on the web using pre-built pages
-              served over content delivery networks (CDN) located near your
-              audience.
+              We build the fastest websites on the web using pre-built pages and
+              content delivery networks (CDN) local to your audience.
             </p>
           </div>
           <div className='blurb'>
@@ -51,8 +50,8 @@ const Home: NextPage = () => {
           <div className='blurb span2'>
             <h3>Scale</h3>
             <p>
-              Scale your site with ease. With static generation and CDNs, our
-              sites scale automatically as your audience grows.
+              With static sites and CDNs, your site scales automatically as your
+              audience grows without worrying about server traffic handling.
             </p>
           </div>
         </BenefitsContainer>
@@ -60,19 +59,19 @@ const Home: NextPage = () => {
       <Section id='discover'>
         <DiscoverContainer>
           <div className='part1'>
-            <h2>Is outdated web architecture holding you back?</h2>
+            <h2>Is your site using old technology?</h2>
             <p className='emphasis'>
-              In today's increasingly-crowded and rapidly-changing web, websites
-              need to be more flexible and nimble to stand out from the pack.
+              In today's crowded and rapidly changing web, your site needs to be
+              flexible and nimble to stand out from the pack.
             </p>
             <p className='body'>
               Traditional content management systems (CMS) like Wordpress,
               Drupal, Wix, and Squarespace have been around since the early
-              2000's. They use a web architecture where content and display are
-              managed together in a single application. This makes them
-              convenient but limited. Plugins can extend functionality, but this
-              adds complexity, reduces agility, introduces more security risk,
-              and increases maintainance overhead.
+              2000's. They use an old web architecture where content and display
+              are managed together in a single application. This makes them
+              convenient but clunky and limited. Plugins can extend
+              functionality, but this adds complexity, introduces more security
+              risk, and increases maintainance overhead.
             </p>
           </div>
         </DiscoverContainer>
@@ -86,8 +85,8 @@ const Home: NextPage = () => {
               think about and build websites.
             </p>
             <p className='body'>
-              In a decoupled system, the content is separate from the display.
-              This allows you to choose the “best in breed” solution for each
+              In a decoupled system, content is separate from display. This
+              allows you to choose the “best in breed” solution for each
               component of your website. This is akin to having a hand-picked
               team of specialists working in concert together, each performing
               their own task with the highest degree of competancy. Because
@@ -148,7 +147,7 @@ const Home: NextPage = () => {
           <div className='blurb'>
             <h3>Lower maintenance cost</h3>
             <p>
-              Jamstack sites are pre-generated, so they are simple to host and
+              Jamstack sites are pre-generated so they are simple to host and
               maintain. No constant plugin and software updates to make sure
               your site stays secure.
             </p>
@@ -156,17 +155,17 @@ const Home: NextPage = () => {
           <div className='blurb'>
             <h3>Boost conversions</h3>
             <p>
-              Increase user satisfaction and time on your site with blazing fast
-              page speeds. Higher user engagement leads to increased
+              Increase user satisfaction and time on your site with increased
+              user interactivity. Higher user engagement leads to more
               conversions.
             </p>
           </div>
           <div className='blurb'>
             <h3>Scale without limits</h3>
             <p>
-              Your site is delivered over a CDN with no traffic limits. With
-              severless architecture, your site scales automatically, so large
-              spikes in traffic won’t crash your site.
+              Your site is delivered over a CDN with no traffic limits. Your
+              site scales automatically, so large spikes in traffic won't crash
+              your server.
             </p>
           </div>
         </BottomLineContainer>
@@ -196,7 +195,7 @@ const Home: NextPage = () => {
             <p>
               We're a small but mighty team. James manages the projects and his
               wife, Lisa, oversees the day-to-day. We employ a network of web
-              professionals, each with their own area of expertise. Seasoned
+              professionals, each in their own area of expertise. Seasoned
               pup-professionals, Hannah and Hebert, keep up team morale.
             </p>
           </div>
@@ -204,8 +203,8 @@ const Home: NextPage = () => {
             <h3>Oklahoma Proud</h3>
             <p>
               We serve clients all over the world from our home base in Edmond,
-              OK. But we especially enjoy serving our local Oklahomans! We're a
-              proud Oklahoma-owned business. If you're in the OKC metro, let's
+              OK. But we particularly enjoy serving our local Oklahomans! We're
+              a proud Oklahoma-owned business. If you're in the OKC metro, let's
               connect over coffee!
             </p>
           </div>
