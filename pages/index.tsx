@@ -388,7 +388,6 @@ const Home: NextPage = () => {
                 Coming Soon
               </ComingSoon>
             </h2>
-
             <p>
               Check out these helpful resources to learn more about how Jamstack
               and Webjeb Studios can unleash the full potential of your
@@ -846,7 +845,7 @@ const ResourcesContainer = styled.div`
     p {
       max-width: 30ch;
     }
-    opacity: 0.5;
+    opacity: 0.25;
   }
 
   .span2 {
@@ -879,7 +878,7 @@ const BlogContainer = styled.div`
     p {
       max-width: 40ch;
     }
-    opacity: 0.5;
+    opacity: 0.25;
   }
 
   @media (max-width: ${BREAKPOINTS.tablet}) {
