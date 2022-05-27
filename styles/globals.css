@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   line-height: 2.7rem;
   color: var(--color-text-body);
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-headings);
   color: var(--color-text-headings);
 }
 h1 {
@@ -135,7 +135,7 @@ a {
 }
 
 .emphasis {
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
   font-style: italic;
   font-size: 3rem;

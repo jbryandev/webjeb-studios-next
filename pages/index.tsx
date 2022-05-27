@@ -155,9 +155,8 @@ const Home: NextPage = () => {
           <div className='blurb'>
             <h3>Boost conversions</h3>
             <p>
-              Increase user satisfaction and time on your site with increased
-              user interactivity. Higher user engagement leads to more
-              conversions.
+              Increase user satisfaction and time on your site with higher user
+              interactivity. More user engagement leads to more conversions.
             </p>
           </div>
           <div className='blurb'>
@@ -383,7 +382,13 @@ const Home: NextPage = () => {
       <Section id='resources'>
         <ResourcesContainer>
           <div className='heading'>
-            <h2>Helpful Resources</h2>
+            <h2>
+              Helpful Resources
+              <ComingSoon style={{ marginLeft: '1rem' }}>
+                Coming Soon
+              </ComingSoon>
+            </h2>
+
             <p>
               Check out these helpful resources to learn more about how Jamstack
               and Webjeb Studios can unleash the full potential of your
@@ -417,6 +422,7 @@ const Home: NextPage = () => {
           <div className='heading'>
             <h2>From our blog</h2>
             <p>Musings about Jamstack and the decoupled web.</p>
+            <ComingSoon>Coming Soon</ComingSoon>
           </div>
           <div className='blurb'>
             <h3>Fun with Frontend Frameworks</h3>
@@ -451,6 +457,16 @@ export default Home;
 const GrayBackground = {
   backgroundColor: 'var(--color-ltgray-background)',
 };
+
+const ComingSoon = styled.span`
+  background-color: var(--color-ltgray-background);
+  color: var(--color-secondary);
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+`;
 
 const HeroContainer = styled.div`
   display: grid;
@@ -510,7 +526,7 @@ const DiscoverContainer = styled.div`
   .part1 {
     grid-column: 1 / -1;
     .emphasis {
-      max-width: 722px;
+      max-width: 794px;
     }
   }
 
@@ -830,6 +846,7 @@ const ResourcesContainer = styled.div`
     p {
       max-width: 30ch;
     }
+    opacity: 0.5;
   }
 
   .span2 {
@@ -862,6 +879,7 @@ const BlogContainer = styled.div`
     p {
       max-width: 40ch;
     }
+    opacity: 0.5;
   }
 
   @media (max-width: ${BREAKPOINTS.tablet}) {

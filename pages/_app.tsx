@@ -25,6 +25,8 @@ const GlobalStyles = createGlobalStyle`
     --gutter-width: 16px;
     --breakpoint-mobile: ${BREAKPOINTS.mobile};
     --breakpoint-tablet: ${BREAKPOINTS.tablet};
+    --font-body: 'Archivo', sans-serif;
+    --font-headings: 'Raleway', sans-serif;
 
     @media (max-width: ${BREAKPOINTS.tablet}) {
       --document-padding: 2rem;
