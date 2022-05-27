@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
     </head>
     <body>
-      <img src="https://webjeb-studios-next.vercel.app/images/webjeb-studios-logo.png" alt="Webjeb Studios Logo">
+      <img src="https://webjebstudios.com/images/webjeb-studios-logo.png" alt="Webjeb Studios Logo">
       <h1>New Lead</h1>
       <p>
         <strong>Name:</strong> ${body.firstName} ${body.lastName}<br />
