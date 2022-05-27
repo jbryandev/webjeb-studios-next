@@ -19,7 +19,6 @@ const StyledSection = styled.section`
   background-color: var(--color-light-background);
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  scroll-margin-top: var(--section-padding);
 `;
 
 const SectionContainer = styled.div`
