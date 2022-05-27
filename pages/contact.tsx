@@ -7,7 +7,6 @@ import styled from 'styled-components';
 import BREAKPOINTS from '../constants';
 import { useRouter } from 'next/router';
 import Button from '../components/button';
-import Script from 'next/script';
 
 // types used for validation
 type FormData = {
@@ -69,9 +68,6 @@ function Contact() {
     useForm<FormData>(formOptions);
   const { errors } = formState;
 
-  // reCAPTCHA public site key
-  // const SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY;
-
   // handle form submission
   function onSubmit(data: FormData) {
     if (data.challenge === 5) {
@@ -127,9 +123,9 @@ function Contact() {
   const ShowForm = (
     <>
       <FormDescription>
-        Thank you for your interest in working with Webjeb Studios! Tell me a
-        few basic details about your project, and I will get back in touch
-        regarding next steps (usually within one business day).{' '}
+        Thank you for your interest in working with Webjeb Studios! Tell us a
+        few basic details about your project, and we will get back in touch with
+        you soon (usually within one business day).{' '}
         <strong>
           This form should take no more than 3 minutes to complete.
         </strong>
@@ -306,8 +302,6 @@ function Contact() {
         <StyledButton type='submit' disabled={formState.isSubmitting}>
           Submit
         </StyledButton>
-        {/* reCAPTCHA script */}
-        <Script src='https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key'></Script>
       </ContactForm>
     </>
   );
@@ -316,8 +310,7 @@ function Contact() {
   const ShowConfirmation = (
     <>
       <FormDescription>
-        Thank you for getting in touch with me about your project needs. I will
-        review your information and get back in touch with you soon. I look
+        Thank you for getting in touch with us about your project needs. We look
         forward to talking with you!
       </FormDescription>
       <Button href='/' variant='secondary'>
