@@ -156,11 +156,11 @@ const LegalMenu = () => {
           <a>Disclaimer</a>
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href='#'>
           <a>Sitemap</a>
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 };

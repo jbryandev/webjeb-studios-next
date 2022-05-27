@@ -24,7 +24,7 @@ const Home: NextPage = () => {
             >
               Discover how
             </Button>
-            <Button href='/contact' variant='primary'>
+            <Button href='#' variant='typeform'>
               Work with us
             </Button>
           </div>
@@ -374,7 +374,7 @@ const Home: NextPage = () => {
             Beat your competition to the punch - be the first to join the
             Jamstack revolution and start reaping the benefits before they do.
           </p>
-          <Button href='/contact' variant='primary'>
+          <Button href='#' variant='typeform'>
             Work with us
           </Button>
         </CTAContainer>

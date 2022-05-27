@@ -36,7 +36,7 @@ const Legal = ({ title, policyKey }: Props) => {
 
   return (
     <Layout title={`Webjeb Studios | ${title}`}>
-      <Section id='heading' customStyles={GrayBackground}>
+      <Section id='heading' customStyles={LegalStyles}>
         <h1>{title}</h1>
       </Section>
       <Section>
@@ -51,8 +51,10 @@ const Legal = ({ title, policyKey }: Props) => {
 
 export default Legal;
 
-const GrayBackground = {
+const LegalStyles = {
   backgroundColor: 'var(--color-ltgray-background)',
+  paddingTop: 'var(--document-margin)',
+  paddingBottom: 'var(--document-margin)',
 };
 
 const Termageddon = styled.div`

@@ -2,11 +2,12 @@ import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import BREAKPOINTS from '../constants';
+import { SliderButton } from '@typeform/embed-react';
 
 type Props = {
   children?: ReactNode;
   href: string;
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'typeform';
   styles?: {};
 };
 
@@ -21,6 +22,12 @@ const Button = ({ children, href, variant, styles }: Props) => {
     return (
       <Link href={href} passHref>
         <TertiaryButton style={styles}>{children}</TertiaryButton>
+      </Link>
+    );
+  } else if (variant === 'typeform') {
+    return (
+      <Link href={href} passHref>
+        <TypeformButton id='As7KOBMB'>{children}</TypeformButton>
       </Link>
     );
   } else {
@@ -95,4 +102,34 @@ const TertiaryButton = styled(StyledButton)`
     transition-property: background-color, border-color, color;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
+`;
+
+const TypeformButton = styled(SliderButton)`
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: var(--button-padding);
+  border: 2px solid;
+  display: inline-block;
+  cursor: pointer;
+
+  color: #fff;
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  transition-property: background-color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transition-property: background-color, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+
+  @media (max-width: ${BREAKPOINTS.mobile}) {
+    font-size: 1.6rem;
+  }
 `;

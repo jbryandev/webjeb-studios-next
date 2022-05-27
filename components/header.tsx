@@ -25,7 +25,7 @@ const Header = () => {
           <MenuWrapper>
             <MainMenu />
           </MenuWrapper>
-          <Button href='/contact' variant='primary'>
+          <Button href='#' variant='typeform'>
             Work with us
           </Button>
         </MenuContainer>
