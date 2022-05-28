@@ -43,17 +43,12 @@ export default Button;
 
 const StyledButton = styled.a`
   text-decoration: none;
-  font-size: 1.8rem;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
   padding: var(--button-padding);
   border: 2px solid;
   display: inline-block;
-
-  @media (max-width: ${BREAKPOINTS.mobile}) {
-    font-size: 1.6rem;
-  }
 `;
 
 const PrimaryButton = styled(StyledButton)`
@@ -106,7 +101,6 @@ const TertiaryButton = styled(StyledButton)`
 
 const TypeformButton = styled(SliderButton)`
   text-decoration: none;
-  font-size: 1.8rem;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -128,8 +122,5 @@ const TypeformButton = styled(SliderButton)`
     transition-property: background-color, border-color;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
-
-  @media (max-width: ${BREAKPOINTS.mobile}) {
-    font-size: 1.6rem;
   }
 `;
