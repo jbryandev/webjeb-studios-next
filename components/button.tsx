@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import BREAKPOINTS from '../constants';
 import { SliderButton } from '@typeform/embed-react';
 
 type Props = {
