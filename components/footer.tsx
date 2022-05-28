@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
 import Section from './section';
+import TypeformLink from './typeform-link';
 import logo from '../public/images/webjeb-studios-logo.png';
 import BREAKPOINTS from '../constants.js';
 import { SliderButton } from '@typeform/embed-react';
@@ -37,9 +38,9 @@ const Footer = () => {
             We're Jamstack experts based in Edmond, Oklahoma, where the wind
             comes sweeping down the plain.
           </p>
-          <Link href='#' passHref>
-            <TypeformLink id='As7KOBMB'>Contact us</TypeformLink>
-          </Link>
+          <TypeformLink href='#' id='As7KOBMB'>
+            Contact us
+          </TypeformLink>
         </div>
         <div className='menu'>
           <p className='menu-title'>Navigation</p>
@@ -128,15 +129,6 @@ const FooterContainer = styled.div`
       grid-column: span 4;
     }
   }
-`;
-
-const TypeformLink = styled(SliderButton)`
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-decoration: underline;
 `;
 
 const BottomBarContainer = styled.div`

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Button from '../components/button';
 import Section from '../components/section';
 import BREAKPOINTS from '../constants';
+import TypeformLink from '../components/typeform-link';
 
 const Home: NextPage = () => {
   return (
@@ -271,9 +272,9 @@ const Home: NextPage = () => {
             <p>
               Are you a web agency looking to partner with us to deliver
               Jamstack solutions? We have whitelabel packages too.{' '}
-              <Link href='/contact'>
-                <a>Contact us</a>
-              </Link>{' '}
+              <TypeformLink href='#' id='As7KOBMB'>
+                Contact us
+              </TypeformLink>{' '}
               for more details.
             </p>
           </div>
