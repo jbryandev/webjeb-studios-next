@@ -11,7 +11,6 @@ import Section from './section';
 import TypeformLink from './typeform-link';
 import logo from '../public/images/webjeb-studios-logo.png';
 import BREAKPOINTS from '../constants.js';
-import { SliderButton } from '@typeform/embed-react';
 
 const Footer = () => {
   return (
