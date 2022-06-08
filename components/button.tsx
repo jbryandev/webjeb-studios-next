@@ -67,8 +67,8 @@ const PrimaryButton = styled(StyledButton)`
 `;
 
 const SecondaryButton = styled(StyledButton)`
-  color: var(--color-secondary);
-  border-color: var(--color-secondary);
+  color: var(--color-light-background);
+  border-color: var(--color-light-background);
   transition-property: color, border-color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;

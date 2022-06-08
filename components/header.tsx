@@ -53,7 +53,7 @@ const HeaderContainer = styled.div`
 
   a.logo {
     width: 169px;
-    @media (max-width: ${BREAKPOINTS.mobile}) {
+    @media (max-width: ${BREAKPOINTS.small}) {
       width: 110px;
     }
   }
@@ -64,7 +64,7 @@ const MenuContainer = styled.div`
   align-items: center;
   justify-content: right;
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.large}) {
     display: none;
   }
 `;

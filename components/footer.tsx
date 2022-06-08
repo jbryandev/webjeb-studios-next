@@ -96,7 +96,7 @@ const FooterContainer = styled.div`
     a.logo {
       display: block;
       width: 169px;
-      @media (max-width: ${BREAKPOINTS.mobile}) {
+      @media (max-width: ${BREAKPOINTS.small}) {
         width: 110px;
       }
     }
@@ -121,7 +121,7 @@ const FooterContainer = styled.div`
     }
   }
 
-  @media (max-width: ${BREAKPOINTS.mobile}) {
+  @media (max-width: ${BREAKPOINTS.medium}) {
     .about {
       grid-column: 1 / -1;
     }
@@ -173,7 +173,7 @@ const BottomBarContainer = styled.div`
     }
   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.large}) {
     grid-template-columns: 1fr;
     grid-gap: 0;
     .copyright {
@@ -184,7 +184,7 @@ const BottomBarContainer = styled.div`
     }
   }
 
-  @media (max-width: ${BREAKPOINTS.mobile}) {
+  @media (max-width: ${BREAKPOINTS.small}) {
     .menu {
       li {
         display: block;

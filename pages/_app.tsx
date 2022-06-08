@@ -15,27 +15,32 @@ const GlobalStyles = createGlobalStyle`
     --color-light-background: #FFF;
     --color-dark-background: #202f38;
     --color-ltgray-background: #FFF6F6;
-    --color-mdgray-background: #C5D2D6;
+    --color-mdgray-background: #ECE6E7;
     --document-max-width:1280px;
     --document-padding: 4rem;
     --document-margin: 6rem;
     --section-padding: 12rem;
     --button-padding: 0.9rem 2.9rem;
-    --column-width: 162px;
+    --column-width: 146px;
     --gutter-width: 16px;
     --breakpoint-mobile: ${BREAKPOINTS.mobile};
     --breakpoint-tablet: ${BREAKPOINTS.tablet};
+    --breakpoint-xsmall: ${BREAKPOINTS.xsmall};
+    --breakpoint-small: ${BREAKPOINTS.small};
+    --breakpoint-medium: ${BREAKPOINTS.medium};
+    --breakpoint-large: ${BREAKPOINTS.large};
     --font-body: 'Archivo', sans-serif;
     --font-headings: 'Raleway', sans-serif;
 
-    @media (max-width: ${BREAKPOINTS.tablet}) {
+    @media (max-width: ${BREAKPOINTS.medium}) {
       --document-padding: 2rem;
       --section-padding: 8rem;
       --button-padding: 0.8rem 2rem;
-  }
+    }
 
-  @media (max-width: ${BREAKPOINTS.mobile}) {
-      --section-padding: 6rem;
+    @media (max-width: ${BREAKPOINTS.small}) {
+        --section-padding: 6rem;
+    }
   }
 `;
 
