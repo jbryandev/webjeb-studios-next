@@ -73,6 +73,10 @@ const MenuWrapper = styled.div`
   li {
     display: inline;
     margin-right: 4.25rem;
+
+    @media (max-width: ${BREAKPOINTS.xlarge}) {
+      margin-right: 3rem;
+    }
   }
   a {
     text-decoration: none;
