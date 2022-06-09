@@ -95,7 +95,7 @@ const FooterContainer = styled.div`
     a.logo {
       display: block;
       width: 169px;
-      @media (max-width: ${BREAKPOINTS.small}) {
+      @media (max-width: ${BREAKPOINTS.large}) {
         width: 110px;
       }
     }

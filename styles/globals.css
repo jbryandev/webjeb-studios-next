@@ -95,7 +95,21 @@ fieldset {
   font-size: 1.8rem;
 }
 
-@media (max-width: 600px) {
+a {
+  color: var(--color-text-body);
+  text-decoration: underline;
+}
+
+.emphasis {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  color: var(--color-text-headings);
+}
+
+@media (max-width: 1024px) {
   h1 {
     font-size: 3.1rem;
     line-height: 3.4rem;
@@ -127,23 +141,7 @@ fieldset {
     font: inherit;
     font-size: 1.6rem;
   }
-}
 
-a {
-  color: var(--color-text-body);
-  text-decoration: underline;
-}
-
-.emphasis {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-style: italic;
-  font-size: 3rem;
-  line-height: 4.5rem;
-  color: var(--color-text-headings);
-}
-
-@media (max-width: 600px) {
   .emphasis {
     font-size: 1.6rem;
     line-height: 2.5rem;

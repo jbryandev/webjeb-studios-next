@@ -820,14 +820,14 @@ const AboutContainer = styled.div`
       display: flex;
       align-items: center;
       margin-bottom: var(--section-padding);
+    }
 
-      .bracket {
-        margin: 0 var(--document-margin);
-      }
+    .bracket {
+      margin: 0 var(--document-margin);
+    }
 
-      .flipped {
-        transform: scaleX(-1);
-      }
+    .flipped {
+      transform: scaleX(-1);
     }
   }
 
@@ -842,7 +842,17 @@ const AboutContainer = styled.div`
     grid-column: span 2;
   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.large}) {
+    .bracket {
+      transform: scale(0.7);
+    }
+
+    .flipped {
+      transform: scaleX(-1) scale(0.7) !important;
+    }
+  }
+
+  @media (max-width: ${BREAKPOINTS.medium}) {
     grid-template-columns: 1fr;
 
     .blurb {
@@ -850,6 +860,10 @@ const AboutContainer = styled.div`
       p {
         max-width: 60ch;
       }
+    }
+
+    .bracket {
+      display: none;
     }
   }
 `;
