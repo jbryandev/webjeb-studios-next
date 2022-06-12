@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     --color-dark-background: #202f38;
     --color-ltgray-background: #FFF6F6;
     --color-mdgray-background: #ECE6E7;
-    --document-max-width:1280px;
+    --document-max-width: 1280px;
     --document-padding: 4rem;
     --document-margin: 6rem;
     --section-padding: 12rem;

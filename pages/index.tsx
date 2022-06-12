@@ -11,6 +11,8 @@ import tradArch from '../public/images/traditional-web-architecture.svg';
 import decoupledArch from '../public/images/decoupled-web-architecture.svg';
 import checkIcon from '../public/images/check-circle.svg';
 import bracket from '../public/images/bracket.svg';
+import howItWorks from '../public/images/how-it-works.svg';
+import arculum from '../public/images/arculum-mockup.webp';
 
 const Home: NextPage = () => {
   return (
@@ -291,64 +293,75 @@ const Home: NextPage = () => {
           </div>
         </ServicesContainer>
       </Section>
-      <Section id='pricing'>
+      <Section id='pricing' customStyles={PricingStyles}>
         <PricingContainer>
-          <h2>Packages & Pricing</h2>
-          <div className='package-desc'>
-            <p>
-              No matter your experience level with Jamstack, we have a package
-              for you. Each package starts at the price shown and is customized
-              to your specific requirements.
-            </p>
-            <p>
-              Are you a web agency looking to partner with us to deliver
-              Jamstack solutions? We have whitelabel packages too.{' '}
-              <TypeformLink href='#' id='As7KOBMB'>
-                Contact us
-              </TypeformLink>{' '}
-              for more details.
-            </p>
+          <div className='title-section'>
+            <div className='title-wrapper'>
+              <h2>Packages & Pricing</h2>
+              <div className='package-desc'>
+                <p>
+                  No matter your experience level with Jamstack, we have a
+                  package for you. Each package starts at the price shown and is
+                  customized to your specific requirements.
+                </p>
+                <p>
+                  Are you a web agency looking to partner with us to deliver
+                  Jamstack solutions? We have whitelabel packages too.{' '}
+                  <TypeformLink href='#' id='As7KOBMB'>
+                    Contact us
+                  </TypeformLink>{' '}
+                  for more details.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className='blurb'>
-            <h3>Jamstack Starter</h3>
-            <p>
-              Choose your CMS and pair it with one of our handcrafted design
-              templates. For clients new to the Jamstack game and looking to get
-              up and running quickly.
-            </p>
-          </div>
-          <div className='price'>
-            <h3 className='emphasis'>Starting at $5,900</h3>
-          </div>
-          <div className='blurb'>
-            <h3>Jamstack Conversion</h3>
-            <p>
-              Decouple your existing traditional website. We carry over all
-              content and keep the design consistent. For clients happy with
-              their look and feel but wanting to tap into the power of the
-              Jamstack.
-            </p>
-          </div>
-          <div className='price'>
-            <h3 className='emphasis'>Starting at $7,900</h3>
-          </div>
-          <div className='blurb'>
-            <h3>Jamstack Ultimate</h3>
-            <p>
-              A customized solution from the ground up. Includes tech strategy,
-              design, development, and SEO. For clients wanting a custom
-              solution tailored to their unique business needs.
-            </p>
-          </div>
-          <div className='price'>
-            <h3 className='emphasis'>Starting at $12,900</h3>
+          <div className='pricing-table'>
+            <div className='pricing-wrapper'>
+              <div className='blurb'>
+                <h3>Jamstack Starter</h3>
+                <p>
+                  Choose your CMS and pair it with one of our handcrafted design
+                  templates. For clients new to the Jamstack game and looking to
+                  get up and running quickly.
+                </p>
+              </div>
+              <div className='price'>
+                <h3 className='emphasis'>Starting at $5,900</h3>
+              </div>
+              <div className='blurb'>
+                <h3>Jamstack Conversion</h3>
+                <p>
+                  Decouple your existing traditional website. We carry over all
+                  content and keep the design consistent. For clients happy with
+                  their look and feel but wanting to tap into the power of the
+                  Jamstack.
+                </p>
+              </div>
+              <div className='price'>
+                <h3 className='emphasis'>Starting at $7,900</h3>
+              </div>
+              <div className='blurb'>
+                <h3>Jamstack Ultimate</h3>
+                <p>
+                  A customized solution from the ground up. Includes tech
+                  strategy, design, development, and SEO. For clients wanting a
+                  custom solution tailored to their unique business needs.
+                </p>
+              </div>
+              <div className='price'>
+                <h3 className='emphasis'>Starting at $12,900</h3>
+              </div>
+            </div>
           </div>
         </PricingContainer>
       </Section>
-      <Section id='process' customStyles={GrayBackground}>
+      <Section id='process'>
         <ProcessContainer>
           <div className='heading'>
             <h2>How it works</h2>
+          </div>
+          <div className='graphic'>
+            <Image src={howItWorks} alt='How it works' />
           </div>
           <div className='blurb'>
             <h3>Discover</h3>
@@ -376,9 +389,12 @@ const Home: NextPage = () => {
           </div>
         </ProcessContainer>
       </Section>
-      <Section id='work'>
+      <Section id='work' customStyles={WorkStyles}>
         <WorkContainer>
           <h2>Recent Work</h2>
+          <div className='mockup'>
+            <Image src={arculum} alt='Arculum Mockup' />
+          </div>
           <div className='blurb'>
             <h3>Arculum Computers</h3>
             <p>
@@ -386,17 +402,9 @@ const Home: NextPage = () => {
               stand out from their competition. This is the result.
             </p>
           </div>
-          <div className='blurb'>
-            <h3>Mark Bryan Construction</h3>
-            <p>
-              A trusted name in the local communtity for over three decades,
-              this residential remodeling company needed to take their brand to
-              the next level.
-            </p>
-          </div>
         </WorkContainer>
       </Section>
-      <Section id='cta' customStyles={GrayBackground}>
+      <Section id='cta' customStyles={CTAStyles}>
         <CTAContainer>
           <h2>
             Ready to leverage the power of the Jamstack to grow your business?
@@ -411,7 +419,7 @@ const Home: NextPage = () => {
           </Button>
         </CTAContainer>
       </Section>
-      <Section id='resources'>
+      {/* <Section id='resources'>
         <ResourcesContainer>
           <div className='heading'>
             <h2>
@@ -478,7 +486,7 @@ const Home: NextPage = () => {
             </p>
           </div>
         </BlogContainer>
-      </Section>
+      </Section> */}
     </Layout>
   );
 };
@@ -489,15 +497,15 @@ const GrayBackground = {
   backgroundColor: 'var(--color-ltgray-background)',
 };
 
-const ComingSoon = styled.span`
-  background-color: var(--color-ltgray-background);
-  color: var(--color-secondary);
-  font-family: var(--font-body);
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 1rem;
-`;
+// const ComingSoon = styled.span`
+//   background-color: var(--color-ltgray-background);
+//   color: var(--color-secondary);
+//   font-family: var(--font-body);
+//   font-size: 1.4rem;
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   padding: 1rem;
+// `;
 
 const HeroStyles = {
   backgroundColor: 'var(--color-text-headings)',
@@ -589,6 +597,7 @@ const BenefitsContainer = styled.div`
 
 const DiscoverStyles = {
   padding: 0,
+  scrollMargin: 'var(--section-padding) 0 0 0',
 };
 
 const DiscoverContainer = styled.div`
@@ -873,6 +882,11 @@ const ServicesContainer = styled.div`
   grid-template-columns: repeat(8, 1fr);
   grid-gap: var(--gutter-width);
   margin-top: var(--document-margin);
+  margin-left: calc(var(--document-padding) * -1);
+  padding-left: var(--document-padding);
+  background-image: url(../images/services-circles.svg);
+  background-repeat: no-repeat;
+  background-position: top 70% left 0;
 
   h2 {
     grid-column: 1 / span 3;
@@ -894,17 +908,31 @@ const ServicesContainer = styled.div`
     grid-column: span 3;
   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.large}) {
+    grid-template-columns: 1fr 1fr;
     h2 {
       grid-column: 1 / -1;
       margin-bottom: var(--section-padding);
     }
 
     .blurb {
-      grid-column: span 4;
+      grid-column: span 1;
+    }
+  }
+
+  @media (max-width: ${BREAKPOINTS.xsmall}) {
+    grid-template-columns: 1fr;
+
+    .blurb {
+      grid-column: 1 / -1;
+      margin-bottom: var(--document-padding);
     }
   }
 `;
+
+const PricingStyles = {
+  padding: 0,
+};
 
 const PricingContainer = styled.div`
   display: grid;
@@ -915,27 +943,82 @@ const PricingContainer = styled.div`
     grid-column: 1 / -1;
   }
 
-  .package-desc {
+  .title-section {
     grid-column: 1 / span 3;
-    grid-row: 2 / span 3;
-    font-style: italic;
-    max-width: 65ch;
-  }
+    margin-top: 8.5rem;
+    margin-left: calc(var(--section-padding) * -1);
+    margin-right: var(--document-margin);
+    z-index: 1;
 
-  .blurb {
-    grid-column: 4 / span 3;
-    p {
-      max-width: 40ch;
+    .title-wrapper {
+      background-color: var(--color-mdgray-background);
+      padding: calc(var(--document-margin) + var(--document-padding)) 8rem
+        var(--document-margin) var(--section-padding);
+
+      .package-desc {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 3;
+        font-style: italic;
+        max-width: 65ch;
+      }
     }
-    margin-bottom: var(--document-margin);
   }
 
-  .price {
-    grid-column: 7 / span 2;
-    text-align: right;
+  .pricing-table {
+    grid-column: 4 / span 5;
+    padding: 19rem var(--section-padding) var(--section-padding)
+      calc((var(--column-width) * 2.5 + var(--gutter-width)));
+    margin: 0 calc(var(--section-padding) * -1) var(--section-padding)
+      calc((var(--column-width) * 2.5 + var(--gutter-width)) * -1);
+    background-color: var(--color-dark-background);
+    color: var(--color-text-body-dark);
+    h2,
+    h3 {
+      color: var(--color-text-headings-dark);
+    }
+    p {
+      margin-bottom: var(--document-margin);
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pricing-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: var(--gutter-width);
+
+      .blurb {
+        grid-column: 1 / span 3;
+        p {
+          max-width: 40ch;
+        }
+        margin-bottom: var(--document-margin);
+      }
+
+      .price {
+        grid-column: span 2;
+        text-align: right;
+      }
+    }
   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
+  @media (max-width: ${BREAKPOINTS.xlarge}) {
+    .title-section {
+      margin-right: 0;
+    }
+
+    .blurb,
+    .price {
+      grid-column: 2 / span 3 !important;
+      text-align: left !important;
+      margin-bottom: var(--document-margin) !important;
+    }
+  }
+
+  @media (max-width: ${BREAKPOINTS.large}) {
+    margin-right: calc(var(--document-padding) * -1);
+    padding-right: var(--document-padding);
     .package-desc {
       grid-column: 1 / -1;
       max-width: 80ch;
@@ -965,6 +1048,10 @@ const ProcessContainer = styled.div`
     margin-bottom: var(--document-margin);
   }
 
+  .graphic {
+    grid-column: 1 / -1;
+  }
+
   .blurb {
     grid-column: span 3;
     p {
@@ -988,6 +1075,10 @@ const ProcessContainer = styled.div`
   }
 `;
 
+const WorkStyles = {
+  backgroundColor: 'var(--color-mdgray-background)',
+};
+
 const WorkContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -999,14 +1090,14 @@ const WorkContainer = styled.div`
     grid-column: 1 / span 3;
   }
 
+  .mockup {
+    grid-column: 4 / span 5;
+  }
+
   .blurb {
-    grid-column: 4 / span 4;
+    grid-column: 1 / span 3;
     p {
       max-width: 42ch;
-    }
-    margin-bottom: var(--document-padding);
-    :last-child {
-      margin-bottom: 0;
     }
   }
 
@@ -1024,17 +1115,35 @@ const WorkContainer = styled.div`
   }
 `;
 
+const CTAStyles = {
+  backgroundColor: 'var(--color-dark-background)',
+  padding: 0,
+};
+
 const CTAContainer = styled.div`
+  margin: 0 calc(var(--section-padding) * -1) 0
+    calc(var(--section-padding) * -1);
+  background-image: url(../images/cta-background.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: calc(var(--section-padding) + var(--document-margin));
+  padding-bottom: calc(var(--section-padding) + var(--document-margin));
   display: grid;
   justify-items: center;
   text-align: center;
   h2 {
     max-width: 30ch;
     margin-bottom: var(--document-margin);
+    color: var(--color-text-headings-dark);
+  }
+
+  h3 {
+    color: var(--color-text-headings-dark);
   }
   p {
     max-width: 60ch;
     margin-bottom: var(--document-margin);
+    color: var(--color-text-body-dark);
   }
 
   @media (max-width: ${BREAKPOINTS.tablet}) {
@@ -1043,78 +1152,78 @@ const CTAContainer = styled.div`
   }
 `;
 
-const ResourcesContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: var(--gutter-width);
-  margin-top: var(--document-margin);
+// const ResourcesContainer = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(8, 1fr);
+//   grid-gap: var(--gutter-width);
+//   margin-top: var(--document-margin);
 
-  .heading {
-    grid-column: 1 / -1;
-    justify-self: center;
-    text-align: center;
-    p {
-      max-width: 60ch;
-      margin-bottom: var(--section-padding);
-    }
-  }
+//   .heading {
+//     grid-column: 1 / -1;
+//     justify-self: center;
+//     text-align: center;
+//     p {
+//       max-width: 60ch;
+//       margin-bottom: var(--section-padding);
+//     }
+//   }
 
-  .blurb {
-    grid-column: span 3;
-    p {
-      max-width: 30ch;
-    }
-    opacity: 0.25;
-  }
+//   .blurb {
+//     grid-column: span 3;
+//     p {
+//       max-width: 30ch;
+//     }
+//     opacity: 0.25;
+//   }
 
-  .span2 {
-    grid-column: span 2;
-  }
+//   .span2 {
+//     grid-column: span 2;
+//   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
-    grid-template-columns: 1fr;
-    .blurb {
-      grid-column: 1 / -1;
-      p {
-        max-width: 60ch;
-      }
-    }
-  }
-`;
+//   @media (max-width: ${BREAKPOINTS.tablet}) {
+//     grid-template-columns: 1fr;
+//     .blurb {
+//       grid-column: 1 / -1;
+//       p {
+//         max-width: 60ch;
+//       }
+//     }
+//   }
+// `;
 
-const BlogContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: var(--gutter-width);
-  margin-bottom: var(--document-margin);
+// const BlogContainer = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(8, 1fr);
+//   grid-gap: var(--gutter-width);
+//   margin-bottom: var(--document-margin);
 
-  .heading {
-    grid-column: 1 / span 2;
-  }
+//   .heading {
+//     grid-column: 1 / span 2;
+//   }
 
-  .blurb {
-    grid-column: 4 / span 5;
-    p {
-      max-width: 40ch;
-    }
-    opacity: 0.25;
-  }
+//   .blurb {
+//     grid-column: 4 / span 5;
+//     p {
+//       max-width: 40ch;
+//     }
+//     opacity: 0.25;
+//   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
-    grid-template-columns: 1fr;
-    .heading {
-      grid-column: 1 / -1;
-      text-align: center;
-      p {
-        max-width: 100%;
-      }
-      margin-bottom: var(--document-margin);
-    }
-    .blurb {
-      grid-column: 1 / -1;
-      p {
-        max-width: 60ch;
-      }
-    }
-  }
-`;
+//   @media (max-width: ${BREAKPOINTS.tablet}) {
+//     grid-template-columns: 1fr;
+//     .heading {
+//       grid-column: 1 / -1;
+//       text-align: center;
+//       p {
+//         max-width: 100%;
+//       }
+//       margin-bottom: var(--document-margin);
+//     }
+//     .blurb {
+//       grid-column: 1 / -1;
+//       p {
+//         max-width: 60ch;
+//       }
+//     }
+//   }
+// `;
