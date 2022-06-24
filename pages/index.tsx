@@ -405,7 +405,7 @@ const Home: NextPage = () => {
         </WorkContainer>
       </Section>
       <Section id='cta' customStyles={CTAStyles}>
-        <CTAContainer>
+        {/* <CTAContainer>
           <h2>
             Ready to leverage the power of the Jamstack to grow your business?
           </h2>
@@ -417,7 +417,7 @@ const Home: NextPage = () => {
           <Button href='#' variant='typeform'>
             Work with us
           </Button>
-        </CTAContainer>
+        </CTAContainer> */}
       </Section>
       {/* <Section id='resources'>
         <ResourcesContainer>
@@ -623,10 +623,14 @@ const DiscoverContainer = styled.div`
       max-width: 794px;
     }
     background-color: var(--color-mdgray-background);
-    padding: var(--section-padding) var(--document-padding)
-      var(--section-padding) var(--section-padding);
-    margin: calc(var(--document-margin) * -1) calc(var(--column-width) / 2) 0
-      calc(var(--section-padding) * -1);
+    padding-top: var(--section-padding);
+    padding-right: var(--document-padding);
+    padding-bottom: var(--section-padding);
+    padding-left: 96px;
+    margin-top: calc(var(--document-margin) * -1);
+    margin-right: calc(var(--column-width) / 2);
+    margin-bottom: 0;
+    margin-left: -96px;
   }
 
   .part1-graphic {
@@ -657,10 +661,14 @@ const DiscoverContainer = styled.div`
 
   .part3 {
     grid-column: 1 / span 5;
-    padding: var(--section-padding) var(--document-padding)
-      var(--section-padding) var(--section-padding);
-    margin: 0 calc((var(--column-width) / 2 + var(--gutter-width)) * -1)
-      calc(var(--section-padding) * 2) calc(var(--section-padding) * -1);
+    padding-top: var(--section-padding);
+    padding-right: var(--document-padding);
+    padding-bottom: var(--section-padding);
+    padding-left: 96px;
+    margin-top: 0;
+    margin-right: calc((var(--column-width) / 2 + var(--gutter-width)) * -1);
+    margin-bottom: calc(var(--section-padding) * 2);
+    margin-left: -96px;
     background-color: var(--color-dark-background);
     color: var(--color-text-body-dark);
     h2,
@@ -922,6 +930,7 @@ const ServicesContainer = styled.div`
 
   @media (max-width: ${BREAKPOINTS.xsmall}) {
     grid-template-columns: 1fr;
+    background-position: top 0 left 0;
 
     .blurb {
       grid-column: 1 / -1;
@@ -946,14 +955,16 @@ const PricingContainer = styled.div`
   .title-section {
     grid-column: 1 / span 3;
     margin-top: 8.5rem;
-    margin-left: calc(var(--section-padding) * -1);
-    margin-right: var(--document-margin);
+    margin-left: -96px;
+    margin-right: calc((146px / 2) - 8px);
     z-index: 1;
 
     .title-wrapper {
       background-color: var(--color-mdgray-background);
-      padding: calc(var(--document-margin) + var(--document-padding)) 8rem
-        var(--document-margin) var(--section-padding);
+      padding-top: calc(var(--document-margin) + var(--document-padding));
+      padding-bottom: var(--document-margin);
+      padding-left: 96px;
+      padding-right: 8rem;
 
       .package-desc {
         grid-column: 1 / span 3;
@@ -966,12 +977,15 @@ const PricingContainer = styled.div`
 
   .pricing-table {
     grid-column: 4 / span 5;
-    padding: 19rem var(--section-padding) var(--section-padding)
-      calc((var(--column-width) * 2.5 + var(--gutter-width)));
-    margin: 0 calc(var(--section-padding) * -1) var(--section-padding)
-      calc((var(--column-width) * 2.5 + var(--gutter-width)) * -1);
     background-color: var(--color-dark-background);
     color: var(--color-text-body-dark);
+    margin-left: -200px;
+    padding-left: 200px;
+    margin-right: -96px;
+    padding-right: 96px;
+    padding-top: calc(var(--section-padding) + var(--document-margin));
+    padding-bottom: var(--section-padding);
+
     h2,
     h3 {
       color: var(--color-text-headings-dark);
@@ -1005,7 +1019,6 @@ const PricingContainer = styled.div`
 
   @media (max-width: ${BREAKPOINTS.xlarge}) {
     .title-section {
-      margin-right: 0;
     }
 
     .blurb,
@@ -1053,9 +1066,11 @@ const ProcessContainer = styled.div`
   }
 
   .blurb {
+    text-align: center;
+    max-width: 60ch;
     grid-column: span 3;
     p {
-      max-width: 33ch;
+      /* max-width: 33ch; */
     }
   }
 
@@ -1120,37 +1135,37 @@ const CTAStyles = {
   padding: 0,
 };
 
-const CTAContainer = styled.div`
-  margin: 0 calc(var(--section-padding) * -1) 0
-    calc(var(--section-padding) * -1);
-  background-image: url(../images/cta-background.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding-top: calc(var(--section-padding) + var(--document-margin));
-  padding-bottom: calc(var(--section-padding) + var(--document-margin));
-  display: grid;
-  justify-items: center;
-  text-align: center;
-  h2 {
-    max-width: 30ch;
-    margin-bottom: var(--document-margin);
-    color: var(--color-text-headings-dark);
-  }
+// const CTAContainer = styled.div`
+//   margin: 0 calc(var(--section-padding) * -1) 0
+//     calc(var(--section-padding) * -1);
+//   background-image: url(../images/cta-background.svg);
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   padding-top: calc(var(--section-padding) + var(--document-margin));
+//   padding-bottom: calc(var(--section-padding) + var(--document-margin));
+//   display: grid;
+//   justify-items: center;
+//   text-align: center;
+//   h2 {
+//     max-width: 30ch;
+//     margin-bottom: var(--document-margin);
+//     color: var(--color-text-headings-dark);
+//   }
 
-  h3 {
-    color: var(--color-text-headings-dark);
-  }
-  p {
-    max-width: 60ch;
-    margin-bottom: var(--document-margin);
-    color: var(--color-text-body-dark);
-  }
+//   h3 {
+//     color: var(--color-text-headings-dark);
+//   }
+//   p {
+//     max-width: 60ch;
+//     margin-bottom: var(--document-margin);
+//     color: var(--color-text-body-dark);
+//   }
 
-  @media (max-width: ${BREAKPOINTS.tablet}) {
-    margin-top: var(--document-margin);
-    margin-bottom: var(--document-margin);
-  }
-`;
+//   @media (max-width: ${BREAKPOINTS.tablet}) {
+//     margin-top: var(--document-margin);
+//     margin-bottom: var(--document-margin);
+//   }
+// `;
 
 // const ResourcesContainer = styled.div`
 //   display: grid;
