@@ -128,6 +128,12 @@ const FooterContainer = styled.div`
       grid-column: span 4;
     }
   }
+
+  @media (max-width: ${BREAKPOINTS.xsmall}) {
+    .menu {
+      grid-column: 1 / -1;
+    }
+  }
 `;
 
 const BottomBarContainer = styled.div`
