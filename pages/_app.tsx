@@ -1,46 +1,14 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { createGlobalStyle } from 'styled-components';
-import BREAKPOINTS from '../constants.js';
 
 const GlobalStyles = createGlobalStyle`
   html {
-    --color-text-body: #415056;
-    --color-text-headings: #202f38;
-    --color-text-body-dark: #C5D2D6;
-    --color-text-headings-dark: #FFF;
-    --color-text-link: #f26922;
-    --color-primary: #f26922;
-    --color-secondary: #415056;
-    --color-light-background: #FFF;
-    --color-dark-background: #202f38;
-    --color-ltgray-background: #FFF6F6;
-    --color-mdgray-background: #ECE6E7;
-    --document-max-width: 1280px;
-    --document-padding: 4rem;
-    --document-margin: 6rem;
-    --section-padding: 12rem;
-    --button-padding: 0.9rem 2.9rem;
-    --column-width: 146px;
-    --gutter-width: 16px;
-    --breakpoint-mobile: ${BREAKPOINTS.mobile};
-    --breakpoint-tablet: ${BREAKPOINTS.tablet};
-    --breakpoint-xsmall: ${BREAKPOINTS.xsmall};
-    --breakpoint-small: ${BREAKPOINTS.small};
-    --breakpoint-medium: ${BREAKPOINTS.medium};
-    --breakpoint-large: ${BREAKPOINTS.large};
-    --font-body: 'Archivo', sans-serif;
-    --font-headings: 'Raleway', sans-serif;
-
-    @media (max-width: ${BREAKPOINTS.medium}) {
-      --document-padding: 2rem;
-      --section-padding: 8rem;
-      --button-padding: 0.8rem 2rem;
-    }
-
-    @media (max-width: ${BREAKPOINTS.small}) {
-        --section-padding: 6rem;
-    }
+    --color-orange: #d65311;
+    --color-peach: #fbdbbf;
+    --color-goldenrod: #e8a623;
+    --color-black: #000300;
+    --color-darkred: #920000;
   }
 `;
 
