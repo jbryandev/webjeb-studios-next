@@ -27,6 +27,7 @@ body {
   color: var(--color-black);
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-orange);
+  overflow-x: hidden;
 }
 img,
 picture,
