@@ -1,7 +1,5 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import Header from './header';
-import Footer from './footer';
 import styled from 'styled-components';
 import Grid from './layout-grid';
 
@@ -19,13 +17,11 @@ const Layout = ({
   <StyledLayout>
     <Head>
       <title>{title}</title>
-      <meta name='description' content='We make Jamstack websites' />
+      <meta name='description' content='Webjeb Studios is hibernating' />
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <Grid status={layoutGrid}>
-      <Header />
       <main>{children}</main>
-      <Footer />
     </Grid>
   </StyledLayout>
 );
