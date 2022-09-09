@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             <div className='pre-headline'>Shhhh...</div>
             <div className='headline'>Webjeb Studios is in hibernation</div>
           </div>
-          <div className='background-text'>Hibernation</div>
+          {/* <div className='background-text'>Hibernation</div> */}
         </Content>
         <Footer>
           <div>
